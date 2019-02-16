@@ -1,0 +1,14 @@
+# General
+.DS_Store
+
+# Volume Root Appearances
+.fseventsd
+.Trashes
+.Spotlight-V100
+.TemporaryItems
+.VolumeIcon.icons
+.DocumentRevisions-V100
+
+# Files that are NOT MINE
+autoload/plug.vim
+plugged/*
