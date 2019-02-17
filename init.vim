@@ -8,6 +8,7 @@ call plug#begin('$XDG_CONFIG_HOME/nvim/plugged')
     Plug 'mhinz/vim-startify' | " Installed Vim-Startify
     Plug 'junegunn/seoul256.vim' | " Installed Seoul256 Theme
     Plug 'luochen1990/rainbow' | " Installed Rainbow, a Parentheses Colorscheme
+    Plug 'vim-latex/vim-latex' | " Installed Vim-LaTeX, a LaTeX Plugin for Vim
 "     Plug 'godlygeek/tabular' | " Installed Tabular, a Table-making plugin
 "     Plug 'plasticboy/vim-markdown' | " Installed Vim Markdown
 call plug#end()
@@ -20,10 +21,9 @@ let $LANG = 'en_US'
 source $VIMRUNTIME/delmenu.vim
 source $VIMRUNTIME/menu.vim
 set langmenu=en_US.utf8 | "Set Menu Language
-set fileencodings=utf8,euc-kr | "Detect File Encoding
+set fileencodings=utf,euc-kr | "Detect File Encoding
 set nu | "Line Numbering
 set linespace=3 | "Set Line Spacing to 3 units
-set lines=45 columns=180 | "Set Window Size
 set expandtab | set shiftwidth=4 | set tabstop=4 | set softtabstop=4 | set smarttab | "Set Tab Spacing
 nnoremap <space> xi<space><esc>| "Press Space in Normal mode to Replace Char with Space
 nnoremap <F1> :cd $XDG_CONFIG_HOME/nvim<CR>:e init.vim<CR>| "Press F1 to Open User init.vim
@@ -53,7 +53,7 @@ nnoremap <C-F12> :PlugClean<CR>| " Press Ctrl+F12 to Delete Plugins
 nnoremap <F11> :PlugUpdate<CR>| " Press F11 to Update new Plugins
 
 " Additional Settings for the Seoul256 Plugin
-let g:seoul256_background = 236
+let g:seoul256_background = 234
 colo seoul256
 highlight EndOfBuffer guifg=bg | "Hide Tildes in Empty Buffer Space
 
@@ -85,3 +85,8 @@ let g:startify_custom_header = [
 autocmd vimenter * NERDTree | wincmd l
 autocmd bufenter * if (!exists("t:NERDTreeBufName") ) | silent NERDTreeMirror | wincmd l | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" Additional Settings for the Vim-LaTeX Plugin
+call IMAP('\docu', '\documentclass[<++>]<++>', tex)
+call IMAP('\use[]', '\usepackage[<++>]{<++>}', tex)
+call IMAP('\usep', '\usepackage{<++>}', tex)
