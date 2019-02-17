@@ -5,12 +5,9 @@ inoremap #def<Space> #define
 nnoremap #def<Space> i#define 
 
 " For Single-File Codes : Save, Compile, and Run
-nnoremap <F5> :w<CR>:!g++ % -o %<.exe<CR><CR>:!%<.exe<CR><CR>
+nnoremap <F5> :w<CR>:!g++ % -o %<.exe<CR><CR>:!%<.exe<CR>
 
-" For Multi-File Codes that require a Makefile
-set makeprg=mingw32-make
-nnoremap <F10> :make %<CR><CR>:!%<.exe<CR>
-" :!@%<.exe<CR> | "Press Func.5 to Invoke Makefile.txt
+" TODO: Multi-File Codes that require a Makefile
 
 " Too Much Customisation
 nnoremap <CR><CR><CR> i#include <lt>iostream><CR>
