@@ -84,8 +84,3 @@ let g:startify_custom_header = [
 autocmd vimenter * NERDTree | wincmd l
 autocmd bufenter * if (!exists("t:NERDTreeBufName") ) | silent NERDTreeMirror | wincmd l | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
-" Additional Settings for the Vim-LaTeX Plugin
-call IMAP('\docu', '\documentclass[<++>]{<++>}', 'tex')
-call IMAP('\use[', '\usepackage[<++>]{<++>}', 'tex')
-call IMAP('\usep', '\usepackage{<++>}', 'tex')
