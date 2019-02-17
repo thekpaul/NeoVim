@@ -79,8 +79,7 @@ let g:startify_custom_header = [
             \ '     * Press F10 to Save and Source a Vimscript File                     ',
             \ '     * Press F11 to Update Plugins via Vim-Plug                          ',
             \ '     * Press F12 to Install new Plugins via Vim-Plug                     ',
-            \ '     * Press Ctrl-F12 to Delete Plugins via Vim-Plug                     ',
-            \ ]
+            \ '     * Press Ctrl-F12 to Delete Plugins via Vim-Plug                     ']
 
 " Additional Settings for the NERDTree Plugin
 autocmd vimenter * NERDTree | wincmd l
