@@ -7,3 +7,4 @@ call IMAP('\chap', '\chapter{<++>}', 'tex')
 call IMAP('\sect', '\section{<++>}', 'tex')
 call IMAP('\subs', '\subsection{<++>}', 'tex')
 call IMAP('\sub2', '\subsubsection{<++>}', 'tex')
+inoremap ` `'<left>
