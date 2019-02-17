@@ -1,4 +1,5 @@
 set noundofile | "No Undo Files
+filetype plugin on | "Set plugin loading according to filetype
 
 " Vim-Plug as Plugin Manager
 call plug#begin('$XDG_CONFIG_HOME/nvim/plugged')
@@ -45,8 +46,6 @@ inoremap <lt><Space> <lt>><left><Backspace>
 inoremap {<CR> {<CR>}<ESC>O
 inoremap {;<CR> {<CR>};<ESC>O
 
-filetype plugin on | "Set plugin loading according to filetype
-
 " Additional Settings for the Vim-Plug Plugin
 nnoremap <F12> :PlugInstall<CR>| " Press F12 to Install new Plugins
 nnoremap <C-F12> :PlugClean<CR>| " Press Ctrl+F12 to Delete Plugins
@@ -87,6 +86,6 @@ autocmd bufenter * if (!exists("t:NERDTreeBufName") ) | silent NERDTreeMirror | 
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " Additional Settings for the Vim-LaTeX Plugin
-call IMAP('\docu', '\documentclass[<++>]<++>', tex)
-call IMAP('\use[]', '\usepackage[<++>]{<++>}', tex)
-call IMAP('\usep', '\usepackage{<++>}', tex)
+call IMAP('\docu', '\documentclass[<++>]{<++>}', 'tex')
+call IMAP('\use[', '\usepackage[<++>]{<++>}', 'tex')
+call IMAP('\usep', '\usepackage{<++>}', 'tex')
