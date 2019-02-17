@@ -45,6 +45,9 @@ inoremap { {}<left>
 inoremap <lt><Space> <lt>><left><Backspace>
 inoremap {<CR> {<CR>}<ESC>O
 inoremap {;<CR> {<CR>};<ESC>O
+if (&ft != 'tex')
+    inoremap ` ``<left>
+endif
 
 " Additional Settings for the Vim-Plug Plugin
 nnoremap <F12> :PlugInstall<CR>| " Press F12 to Install new Plugins
