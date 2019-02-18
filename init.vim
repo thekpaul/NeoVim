@@ -40,16 +40,15 @@ nnoremap "o 00i"<space><esc>| "Press Quotation Mark then o to State a Comment in
 nnoremap "x 00xx| "Press Quotation Mark then x to De-comment in Vimscript
 
 " AutoClose
-inoremap " ""<left>
-inoremap ' ''<left>
-inoremap ( ()<left>
-inoremap [ []<left>
-inoremap { {}<left>
-inoremap <lt><Space> <lt>><left><Backspace>
+inoremap " ""<lt>++><Esc>5j
+inoremap ' ''<lt>++><Esc>5j
+inoremap ( ()<lt>++><Esc>5j
+inoremap [ []<lt>++><Esc>5j
+inoremap { {}<lt>++><Esc>5j
 inoremap {<CR> {<CR>}<ESC>O
 inoremap {;<CR> {<CR>};<ESC>O
 if (&ft != 'tex')
-    inoremap ` ``<left>
+    inoremap ` ``<lt>++><Esc>5j
 endif
 
 " Additional Settings for the Vim-Plug Plugin
