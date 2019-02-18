@@ -11,8 +11,6 @@ nnoremap <F5> :w<CR>:!g++ % -o %<.exe<CR><CR>:!%<.exe<CR>
 
 " Too Much Customisation
 nnoremap <CR><CR><CR> i#include <lt>iostream><CR>
-                      \#include <lt>string><CR>
-                      \#include <lt>bitset><CR>
                       \using namespace std;<CR>
                       \<CR>
                       \int main(void) {<CR>
