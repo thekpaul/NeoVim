@@ -9,7 +9,8 @@ nnoremap <F5> :w<CR>:!g++ % -o %<.exe<CR><CR>:!%<.exe<CR>
 
 " TODO: Multi-File Codes that require a Makefile
 
-" Too Much Customisation
+inoremap class<CR> class <++> {<CR><++><CR>} <++>;
+
 nnoremap <CR><CR><CR> i#include <lt>iostream><CR>
                       \using namespace std;<CR>
                       \<CR>
