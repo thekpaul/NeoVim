@@ -1,3 +1,7 @@
+if (&ft != 'cpp')
+    finish
+endif
+
 inoremap /* /**/<left><left> 
 inoremap #inc<Space> #include <lt>><left>
 nnoremap #inc<Space> i#include <lt>><left>
