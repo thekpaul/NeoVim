@@ -22,12 +22,15 @@ let $LANG = 'en_US'
 source $VIMRUNTIME/delmenu.vim
 source $VIMRUNTIME/menu.vim
 set langmenu=en_US.utf8 | "Set Menu Language
-set fileencodings=utf,euc-kr | "Detect File Encoding
+set fileencodings=utf8 | "Set NEW File Encoding to UTF-8
+    if (&fileencodings != utf8)
+        set fileencodings=utf8
+    endif | "Set ALL File Encoding to UTF-8
 set nu | "Line Numbering
 set linespace=3 | "Set Line Spacing to 3 units
 set expandtab | set shiftwidth=4 | set tabstop=4 | set softtabstop=4 | set smarttab | "Set Tab Spacing
 nnoremap <space> xi<space><esc>| "Press Space in Normal mode to Replace Char with Space
-nnoremap <F1> :cd $XDG_CONFIG_HOME/nvim<CR>:e init.vim<CR>| "Press F1 to Open User init.vim
+nnoremap <F1> :cd $XDG_CONFIG_HOME/nvim<CR>:e init.vim<CR>| "Press F1 to Open Uer init.vim
 nnoremap <C-F1> :cd $VIM<CR>:e sysinit.vim<CR>| "Press Ctrl+F1 to Open System sysinit.vim
 nnoremap <F2> :tabe $XDG_CONFIG_HOME/nvim/init.vim<CR>| "Press F2 to Open User init.vim in New Tab
 nnoremap <C-F2> :tabe $VIM/sysinit.vim<CR>| "Press Ctrl+F2 to Open System sysinit.vim in New Tab
