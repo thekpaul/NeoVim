@@ -36,8 +36,8 @@ nnoremap <F2> :tabe $XDG_CONFIG_HOME/nvim/init.vim<CR><F3>| "Press F2 to Open Us
 nnoremap <C-F2> :tabe $VIM/sysinit.vim<CR><F3>| "Press Ctrl+F2 to Open System sysinit.vim in New Tab
 nnoremap <F3> :cd %:p:h<CR>| "Press F3 to Change Working Directory to Current File
 nnoremap <F10> :w<CR>:source %<CR>| "Press F10 to Save and Reload Current File
-nnoremap "o 00i"<space><esc>| "Press Quotation Mark then o to State a Comment in Vimscript
-nnoremap "x 00xx| "Press Quotation Mark then x to De-comment in Vimscript
+nnoremap "o 0i"<space><esc>| "Press Quotation Mark then o to State a Comment in Vimscript
+nnoremap "x 0xx| "Press Quotation Mark then x to De-comment in Vimscript
 
 " AutoClose
 inoremap " ""<lt>++><Esc>5ha
