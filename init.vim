@@ -1,5 +1,4 @@
 set noundofile | "No Undo Files
-filetype plugin indent on | "Set plugin loading according to filetype
 
 " Vim-Plug as Plugin Manager
 call plug#begin('$XDG_CONFIG_HOME/nvim/plugged')
@@ -50,6 +49,8 @@ inoremap {;<CR> {<CR>};<ESC>O
 if (&ft != 'tex')
     inoremap ` ``<lt>++><Esc>5ha
 endif
+
+filetype plugin indent on | "Set plugin loading according to filetype
 
 " Additional Settings for the Vim-Plug Plugin
 nnoremap <F12> :PlugInstall<CR>| " Press F12 to Install new Plugins
