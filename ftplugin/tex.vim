@@ -1,3 +1,8 @@
+" Only Execute when File Type is TeX
+if (&ft != 'tex')
+    finish
+endif
+
 " Mappings for Vim-LaTeX
 call IMAP('\docu', '\documentclass[<++>]{<++>}', 'tex')
 call IMAP('\use[', '\usepackage[<++>]{<++>}', 'tex')
