@@ -2,9 +2,11 @@ if (&ft != 'cpp')
     finish
 endif
 
-inoremap /* /**/<left><left> 
-inoremap #inc<Space> #include <lt>><left>
-nnoremap #inc<Space> i#include <lt>><left>
+inoremap /* /**/<left><left>
+inoremap #inc<lt> #include <lt>><left>
+nnoremap #inc<lt> i#include <lt>><left>
+inoremap #inc" #include ""<left>
+nnoremap #inc" i#include ""<left>
 inoremap #def<Space> #define 
 nnoremap #def<Space> i#define 
 
