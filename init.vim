@@ -1,5 +1,7 @@
 set noundofile | "No Undo Files
 
+" let g:python3_host_prog = 'C:/Users/brigh/path/to/python' | "Python 3
+
 " Vim-Plug as Plugin Manager
 call plug#begin('$XDG_CONFIG_HOME/nvim/plugged')
     Plug 'sudar/vim-arduino-syntax' | " Installed Arduino Syntax
@@ -12,6 +14,8 @@ call plug#begin('$XDG_CONFIG_HOME/nvim/plugged')
 "     Plug 'godlygeek/tabular' | " Installed Tabular, a Table-making plugin
 "     Plug 'plasticboy/vim-markdown' | " Installed Vim Markdown
 call plug#end()
+
+filetype plugin indent on | "Set plugin loading according to filetype
 
 " Personal Settings
 set guifont=D2Coding:h10
@@ -31,9 +35,11 @@ set expandtab | set shiftwidth=4 | set tabstop=4 | set softtabstop=4 | set smart
 nnoremap <space> xi<space><esc>| "Press Space in Normal mode to Replace Char with Space
 nnoremap <F1> :cd $XDG_CONFIG_HOME/nvim<CR>:e init.vim<CR>| "Press F1 to Open User init.vim
 nnoremap <C-F1> :cd $VIM<CR>:e sysinit.vim<CR>| "Press Ctrl+F1 to Open System sysinit.vim
-nnoremap <F2> :tabe $XDG_CONFIG_HOME/nvim/init.vim<CR><F3>| "Press F2 to Open User init.vim in New Tab
-nnoremap <C-F2> :tabe $VIM/sysinit.vim<CR><F3>| "Press Ctrl+F2 to Open System sysinit.vim in New Tab
+nnoremap <F2> :tabe $XDG_CONFIG_HOME/nvim/init.vim<CR>:cd %:p:h<CR>| "Press F2 to Open User init.vim in New Tab
+nnoremap <C-F2> :tabe $VIM/sysinit.vim<CR>:cd %:p:h<CR>| "Press Ctrl+F2 to Open System sysinit.vim in New Tab
 nnoremap <F3> :cd %:p:h<CR>| "Press F3 to Change Working Directory to Current File
+nnoremap <F4> :call delete(expand('%'))<CR>| "Press F4 to delete Current File
+nnoremap <C-F4> :call delete(expand('%'))<CR>:bdelete!<CR>| "Press Ctrl+F4 to delete Current File and quit buffer
 nnoremap <F10> :w<CR>:source %<CR>| "Press F10 to Save and Reload Current File
 nnoremap "o 0i"<space><esc>| "Press Quotation Mark then o to State a Comment in Vimscript
 nnoremap "x 0xx| "Press Quotation Mark then x to De-comment in Vimscript
@@ -49,8 +55,6 @@ inoremap {;<CR> {<CR>};<ESC>O
 if (&ft != 'tex')
     inoremap ` ``<lt>++><Esc>5ha
 endif
-
-filetype plugin indent on | "Set plugin loading according to filetype
 
 " Additional Settings for the Vim-Plug Plugin
 nnoremap <F12> :PlugInstall<CR>| " Press F12 to Install new Plugins
