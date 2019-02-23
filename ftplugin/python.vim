@@ -3,8 +3,8 @@ if (&ft != 'python')
     finish
 endif
 
-" Next Line Autocomment
-" TODO: If a line has a comment, <Shift><Enter> triggers commenting in next line at same column
+" Next Line Comment
+" TODO: Insert-mode Map
 
 " For Single-File Codes : Save, Compile and Run
 nnoremap <F5> :w<CR>:!py %<CR>
