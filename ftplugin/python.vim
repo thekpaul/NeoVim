@@ -7,6 +7,6 @@ endif
 " TODO: Insert-mode Map
 
 " For Single-File Codes : Save, Compile and Run
-nnoremap <F5> :w<CR>:!py %<CR>
+nnoremap <buffer> <F5> :w<CR>:!py %<CR>
 
 " TODO: Multi-File Codes that require a Makefile
