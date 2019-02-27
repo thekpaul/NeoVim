@@ -15,6 +15,7 @@ call plug#begin('$XDG_CONFIG_HOME/nvim/plugged')
 "     Plug 'plasticboy/vim-markdown' | " Installed Vim Markdown
 call plug#end()
 
+filetype off
 filetype plugin indent on | "Set plugin loading according to filetype
 
 " Personal Settings
