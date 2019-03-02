@@ -69,6 +69,7 @@ highlight EndOfBuffer guifg=bg | "Hide Tildes in Empty Buffer Space
 
 " Additional Settings for the Vimtex Plugin
 let g:tex_flavor = 'latex'
+let g:Tex_DefaultTargetFormat = 'pdf'
 
 " Additional Settings for the Startify Plugin
 let g:startify_custom_header = [
