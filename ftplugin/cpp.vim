@@ -16,11 +16,14 @@ nnoremap <buffer> <C-F5> :w<CR>:!g++ % -o %<.exe<CR><CR>:tabe<CR>:terminal<CR>3j
 
 " TODO: Multi-File Codes that require a Makefile
 
-inoremap <buffer> class<CR> class <++> {<CR><++><CR>} <++>;
+inoremap <buffer> \class<CR> class <++> {<CR>
+                            \<++><CR>
+                            \} <++>;
 
 nnoremap <buffer> <CR><CR><CR> i#include <lt>iostream><CR>
                                \using namespace std;<CR>
                                \<CR>
                                \int main(void) {<CR>
+                               \<++><CR>
                                \return 0;<CR>
-                               \}<Esc>klllli<CR><Esc>ka
+                               \}
