@@ -63,7 +63,7 @@ nnoremap <C-F12> :PlugClean<CR>| " Press Ctrl+F12 to Delete Plugins
 nnoremap <F11> :PlugUpdate<CR>| " Press F11 to Update new Plugins
 
 " Additional Settings for the Seoul256 Plugin
-let g:seoul256_background = 234
+let g:seoul256_background = 235
 colo seoul256
 highlight EndOfBuffer guifg=bg | "Hide Tildes in Empty Buffer Space
 
