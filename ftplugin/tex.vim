@@ -4,11 +4,14 @@ if (&ft != 'tex')
 endif
 
 " Mappings for Vim-LaTeX
-call IMAP('\docu', '\documentclass[<++>]{<++>}', 'tex')
-call IMAP('\use[', '\usepackage[<++>]{<++>}', 'tex')
-call IMAP('\usep', '\usepackage{<++>}', 'tex')
-call IMAP('\part', '\part{<++>}', 'tex')
-call IMAP('\chap', '\chapter{<++>}', 'tex')
-call IMAP('\sect', '\section{<++>}', 'tex')
-call IMAP('\subs', '\subsection{<++>}', 'tex')
-call IMAP('\sub2', '\subsubsection{<++>}', 'tex')
+inoremap <buffer> \docu \documentclass[<++>]{<++>}
+inoremap <buffer> \use[ \usepackage[<++>]{<++>}
+inoremap <buffer> \usep \usepackage[<++>]{<++>}
+inoremap <buffer> \part \part{<++>}
+inoremap <buffer> \chap \chapter{<++>}
+inoremap <buffer> \sect \section{<++>}
+inoremap <buffer> \subs \subsection{<++>}
+inoremap <buffer> \sub2 \subsubsection{<++>}
+
+" Invoking PDFLaTeX
+nnoremap <buffer> <F5> :w<CR>:!pdflatex %:p<CR>
