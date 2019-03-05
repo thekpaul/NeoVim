@@ -1,3 +1,7 @@
+" Behave MS Windows
+runtime mswin.vim
+set mouse=a
+
 set noundofile | "No Undo Files
 
 " let g:python3_host_prog = 'C:/Users/brigh/path/to/python' | "Python 3
@@ -10,7 +14,6 @@ call plug#begin('$XDG_CONFIG_HOME/nvim/plugged')
     Plug 'vim-airline/vim-airline' | " Installed Vim-Airline
     Plug 'junegunn/seoul256.vim' | " Installed Seoul256 Theme
     Plug 'luochen1990/rainbow' | " Installed Rainbow, a Parentheses Colorscheme
-    Plug 'vim-latex/vim-latex' | " Installed Vim-LaTeX, a LaTeX Plugin for Vim
 "     Plug 'godlygeek/tabular' | " Installed Tabular, a Table-making plugin
 "     Plug 'plasticboy/vim-markdown' | " Installed Vim Markdown
 call plug#end()
@@ -33,7 +36,6 @@ set fileencodings=utf8 | "Set NEW File Encoding to UTF-8
 set nu | "Line Numbering
 set linespace=3 | "Set Line Spacing to 3 units
 set expandtab | set shiftwidth=4 | set tabstop=4 | set softtabstop=4 | set smarttab | "Set Tab Spacing
-nnoremap <space> xi<space><esc>| "Press Space in Normal mode to Replace Char with Space
 nnoremap <F1> :cd $XDG_CONFIG_HOME/nvim<CR>:e init.vim<CR>| "Press F1 to Open User init.vim
 nnoremap <C-F1> :cd $VIM<CR>:e sysinit.vim<CR>| "Press Ctrl+F1 to Open System sysinit.vim
 nnoremap <F2> :tabe $XDG_CONFIG_HOME/nvim/init.vim<CR>:cd %:p:h<CR>| "Press F2 to Open User init.vim in New Tab
@@ -79,13 +81,13 @@ autocmd VImEnter *
             \ |   wincmd w
             \ | endif
 let g:startify_custom_header = [
-            \ '                                 __                                      ',
-            \ '               __               /\ \                                     ',
-            \ '      __   __ /\_\    ___ ___   \ \ \                                    ',
-            \ '     /\ \ /\ \\/\ \ /` __` __`\  \ \ \                                   ',
-            \ '     \ \ \_/ / \ \ \/\ \/\ \/\ \  \ \_\                                  ',
-            \ '      \ \___/   \ \_\ \_\ \_\ \_\  \/\_\                                 ',
-            \ '       \/__/     \/_/\/_/\/_/\/_/   \/_/                                 ',
+            \ '                                 __ __                                   ',
+            \ '               __               /\ \\ \                                  ',
+            \ '      __   __ /\_\    ___ ___   \ \ \\ \                                 ',
+            \ '     /\ \ /\ \\/\ \ /` __` __`\  \ \ \\ \                                ',
+            \ '     \ \ \_/ / \ \ \/\ \/\ \/\ \  \ \_\\_\                               ',
+            \ '      \ \___/   \ \_\ \_\ \_\ \_\  \/\_\\_\                              ',
+            \ '       \/__/     \/_/\/_/\/_/\/_/   \/_//_/                              ',
             \ '                                                                         ',
             \ '                                                                         ',
             \ '     * Press F1 to Open User init.vim                                    ',
