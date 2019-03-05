@@ -5,9 +5,9 @@ set noundofile | "No Undo Files
 " Vim-Plug as Plugin Manager
 call plug#begin('$XDG_CONFIG_HOME/nvim/plugged')
     Plug 'sudar/vim-arduino-syntax' | " Installed Arduino Syntax
+    Plug 'mhinz/vim-startify' | " Installed Vim-Startify
     Plug 'scrooloose/nerdtree' | " Installed NERDTree
     Plug 'vim-airline/vim-airline' | " Installed Vim-Airline
-    Plug 'mhinz/vim-startify' | " Installed Vim-Startify
     Plug 'junegunn/seoul256.vim' | " Installed Seoul256 Theme
     Plug 'luochen1990/rainbow' | " Installed Rainbow, a Parentheses Colorscheme
     Plug 'vim-latex/vim-latex' | " Installed Vim-LaTeX, a LaTeX Plugin for Vim
@@ -72,6 +72,12 @@ let g:tex_flavor = 'latex'
 let g:Tex_DefaultTargetFormat = 'pdf'
 
 " Additional Settings for the Startify Plugin
+autocmd VImEnter *
+            \   if !argc()
+            \ |   Startify
+            \ |   NERDTree
+            \ |   wincmd w
+            \ | endif
 let g:startify_custom_header = [
             \ '                                 __                                      ',
             \ '               __               /\ \                                     ',
@@ -93,6 +99,8 @@ let g:startify_custom_header = [
             \ '     * Press Ctrl-F12 to Delete Plugins via Vim-Plug                     ']
 
 " Additional Settings for the NERDTree Plugin
+let g:NERDTreeWinPos = "right"
+let g:NERDTreeMinimalUI = 1
 autocmd vimenter * NERDTree | wincmd l
 autocmd bufenter * if (!exists("t:NERDTreeBufName") ) | silent NERDTreeMirror | wincmd l | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
