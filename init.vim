@@ -37,6 +37,7 @@ set nu | "Line Numbering
 set linespace=3 | "Set Line Spacing to 3 units
 set expandtab | set shiftwidth=4 | set tabstop=4 | set softtabstop=4 | set smarttab | "Set Tab Spacing
 set cursorline | set cursorcolumn
+set breakindent | set linebreak
 
 " Set Mappings for Vimscript and Vanilla Vim Management
 nnoremap <F1> :cd $XDG_CONFIG_HOME/nvim<CR>:e init.vim<CR>| "Press F1 to Open User init.vim
