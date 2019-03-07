@@ -15,7 +15,7 @@ inorea <buffer> chap \chapter{<++>}
 inorea <buffer> sect \section{<++>}
 inorea <buffer> subs \subsection{<++>}
 inorea <buffer> sub2 \subsubsection{<++>}
-inoremap <buffer> ` `'<++>
+inoremap <buffer> ` `'<++><Esc>5ha
 
 " Invoking PDFLaTeX
 nnoremap <buffer> <F5> :w<CR>:!pdflatex %:p<CR>
