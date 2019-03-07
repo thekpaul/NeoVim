@@ -1,6 +1,5 @@
 " Behave MS Windows
 runtime mswin.vim
-set mouse=a
 
 set noundofile | "No Undo Files
 
@@ -15,6 +14,7 @@ call plug#begin('$XDG_CONFIG_HOME/nvim/plugged')
     Plug 'junegunn/seoul256.vim' | " Installed Seoul256 Theme
     Plug 'luochen1990/rainbow' | " Installed Rainbow, a Parentheses Colorscheme
     Plug 'vim-latex/vim-latex' | " Installed Vim-Latex, a LaTeX Plugin
+    Plug 'tpope/vim-fugitive' | " Installed fugitive.vim, a Git wrapper
 "     Plug 'godlygeek/tabular' | " Installed Tabular, a Table-making plugin
 "     Plug 'plasticboy/vim-markdown' | " Installed Vim Markdown
 call plug#end()
@@ -77,12 +77,6 @@ let g:tex_flavor = 'latex'
 let g:Tex_DefaultTargetFormat = 'pdf'
 
 " Additional Settings for the Startify Plugin
-autocmd VimEnter *
-            \   if !argc()
-            \ |   Startify
-            \ |   NERDTree
-            \ |   wincmd w
-            \ | endif
 let g:startify_custom_header = [
             \ '                                 __ __                                   ',
             \ '               __               /\ \\ \                                  ',
@@ -104,7 +98,6 @@ let g:startify_custom_header = [
             \ '     * Press Ctrl-F12 to Delete Plugins via Vim-Plug                     ']
 
 " Additional Settings for the NERDTree Plugin
-let g:NERDTreeWinPos = "right"
 let g:NERDTreeMinimalUI = 1
 autocmd VimEnter * NERDTree | wincmd l
 autocmd BufEnter * if (!exists("t:NERDTreeBufName") ) | silent NERDTreeMirror | wincmd l | endif
