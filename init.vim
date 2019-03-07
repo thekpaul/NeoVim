@@ -14,6 +14,7 @@ call plug#begin('$XDG_CONFIG_HOME/nvim/plugged')
     Plug 'vim-airline/vim-airline' | " Installed Vim-Airline
     Plug 'junegunn/seoul256.vim' | " Installed Seoul256 Theme
     Plug 'luochen1990/rainbow' | " Installed Rainbow, a Parentheses Colorscheme
+    Plug 'vim-latex/vim-latex' | " Installed Vim-Latex, a LaTeX Plugin
 "     Plug 'godlygeek/tabular' | " Installed Tabular, a Table-making plugin
 "     Plug 'plasticboy/vim-markdown' | " Installed Vim Markdown
 call plug#end()
@@ -26,8 +27,8 @@ set guifont=D2Coding:h10
 set encoding=utf8 | "Set File Encoding as UTF-8
 language en
 let $LANG = 'en_US'
-source $VIMRUNTIME/delmenu.vim
-source $VIMRUNTIME/menu.vim
+runtime delmenu.vim
+runtime menu.vim
 set langmenu=en_US.utf8 | "Set Menu Language
 set fileencodings=utf8 | "Set NEW File Encoding to UTF-8
     if (&fileencodings != 'utf8')
@@ -74,7 +75,7 @@ let g:tex_flavor = 'latex'
 let g:Tex_DefaultTargetFormat = 'pdf'
 
 " Additional Settings for the Startify Plugin
-autocmd VImEnter *
+autocmd VimEnter *
             \   if !argc()
             \ |   Startify
             \ |   NERDTree
@@ -103,6 +104,7 @@ let g:startify_custom_header = [
 " Additional Settings for the NERDTree Plugin
 let g:NERDTreeWinPos = "right"
 let g:NERDTreeMinimalUI = 1
-autocmd vimenter * NERDTree | wincmd l
-autocmd bufenter * if (!exists("t:NERDTreeBufName") ) | silent NERDTreeMirror | wincmd l | endif
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+autocmd VimEnter * NERDTree | wincmd l
+autocmd BufEnter * if (!exists("t:NERDTreeBufName") ) | silent NERDTreeMirror | wincmd l | endif
+autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+autocmd BufEnter * if bufname('#') =~# "^NERD_tree_" | b# | endif | " If previous buffer was NERDTree, go back to it
