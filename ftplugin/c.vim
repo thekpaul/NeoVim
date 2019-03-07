@@ -3,8 +3,8 @@ if (&ft != 'c')
     finish
 endif
 
-inoremap <buffer> /* /**/<left><left> 
-inoremap <buffer> #inc<Space> #include <lt>><left>
+iabbrev <buffer> /* /**/<left><left> 
+iabbrev <buffer> #inc<Space> #include <lt>><left>
 nnoremap <buffer> #inc<Space> i#include <lt>><left>
 
 " For Single-File Codes : Save, Compile and Run

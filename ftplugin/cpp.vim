@@ -2,12 +2,12 @@ if (&ft != 'cpp')
     finish
 endif
 
-inoremap <buffer> /* /**/<left><left>
-inoremap <buffer> #inc<lt> #include <lt>><left>
+iabbrev <buffer> /* /**/<left><left>
+iabbrev <buffer> #inc<lt> #include <lt>><left>
+iabbrev <buffer> #inc" #include ""<left>
+iabbrev <buffer> #def<Space> #define 
 nnoremap <buffer> #inc<lt> i#include <lt>><left>
-inoremap <buffer> #inc" #include ""<left>
 nnoremap <buffer> #inc" i#include ""<left>
-inoremap <buffer> #def<Space> #define 
 nnoremap <buffer> #def<Space> i#define 
 
 " For Single-File Codes : Save, Compile, and Run
@@ -16,7 +16,7 @@ nnoremap <buffer> <C-F5> :w<CR>:!g++ % -o %<.exe<CR><CR>:tabe<CR>:terminal<CR>3j
 
 " TODO: Multi-File Codes that require a Makefile
 
-inoremap <buffer> \class<CR> class <++> {<CR>
+iabbrev <buffer> \class class <++> {<CR>
                             \<++><CR>
                             \} <++>;
 
@@ -24,6 +24,6 @@ nnoremap <buffer> <CR><CR><CR> i#include <lt>iostream><CR>
                                \using namespace std;<CR>
                                \<CR>
                                \int main(void) {<CR>
-                               \<++><CR>
+                               \<++>;<CR>
                                \return 0;<CR>
                                \}
