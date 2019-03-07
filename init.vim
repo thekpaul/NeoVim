@@ -72,10 +72,6 @@ let g:seoul256_background = 235
 colo seoul256
 highlight EndOfBuffer guifg=bg | "Hide Tildes in Empty Buffer Space
 
-" Additional Settings for the Vimtex Plugin
-let g:tex_flavor = 'latex'
-let g:Tex_DefaultTargetFormat = 'pdf'
-
 " Additional Settings for the Startify Plugin
 let g:startify_custom_header = [
             \ '                                 __ __                                   ',
@@ -103,3 +99,7 @@ autocmd VimEnter * NERDTree | wincmd l
 autocmd BufEnter * if (!exists("t:NERDTreeBufName") ) | silent NERDTreeMirror | wincmd l | endif
 autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 autocmd BufEnter * if bufname('#') =~# "^NERD_tree_" | b# | endif | " If previous buffer was NERDTree, go back to it
+
+" Additional Settings for the vim-indent-guides Plugin
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_exclude_filetypes = ['help', 'nerdtree', 'startify']
