@@ -15,8 +15,7 @@ call plug#begin('$XDG_CONFIG_HOME/nvim/plugged')
     Plug 'luochen1990/rainbow' | " Installed Rainbow, a Parentheses Colorscheme
     Plug 'vim-latex/vim-latex' | " Installed Vim-Latex, a LaTeX Plugin
     Plug 'tpope/vim-fugitive' | " Installed fugitive.vim, a Git wrapper
-"     Plug 'godlygeek/tabular' | " Installed Tabular, a Table-making plugin
-"     Plug 'plasticboy/vim-markdown' | " Installed Vim Markdown
+    Plug 'nathanaelkane/vim-indent-guides' | " Installed vim-indent-guides, a visual indentation guide
 call plug#end()
 
 filetype off
@@ -37,6 +36,7 @@ set fileencodings=utf8 | "Set NEW File Encoding to UTF-8
 set nu | "Line Numbering
 set linespace=3 | "Set Line Spacing to 3 units
 set expandtab | set shiftwidth=4 | set tabstop=4 | set softtabstop=4 | set smarttab | "Set Tab Spacing
+set cursorline | set cursorcolumn
 
 " Set Mappings for Vimscript and Vanilla Vim Management
 nnoremap <F1> :cd $XDG_CONFIG_HOME/nvim<CR>:e init.vim<CR>| "Press F1 to Open User init.vim
