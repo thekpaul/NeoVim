@@ -3,8 +3,7 @@ if (&ft != 'cpp')
 endif
 
 inorea <buffer> #inc<lt> #include <lt>><left>
-inorea <buffer> #inc" #include ""<left>
-inorea <buffer> #def #define
+inorea <buffer> #inc""<++> #include ""<left>
 nnoremap <buffer> #inc<lt> i#include <lt>><left>
 nnoremap <buffer> #inc" i#include ""<left>
 nnoremap <buffer> #def<Space> i#define 
