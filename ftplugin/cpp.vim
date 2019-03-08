@@ -2,9 +2,9 @@ if (&ft != 'cpp')
     finish
 endif
 
-iabbrev <buffer> #inc<lt> #include <lt>><left>
-iabbrev <buffer> #inc" #include ""<left>
-iabbrev <buffer> #def<Space> #define 
+inorea <buffer> #inc<lt> #include <lt>><left>
+inorea <buffer> #inc" #include ""<left>
+inorea <buffer> #def #define
 nnoremap <buffer> #inc<lt> i#include <lt>><left>
 nnoremap <buffer> #inc" i#include ""<left>
 nnoremap <buffer> #def<Space> i#define 
