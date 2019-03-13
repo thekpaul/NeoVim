@@ -7,28 +7,33 @@ endif
 let b:suppress_latex_suite = 1
 
 " Detect leader char of abbrev lhs and convert only if leader == '\'
-function! s:Expr(default, repl)
-  if getline('.')[col('.')-2]=='\'
-    return "\<bs>".a:repl
-  else
-    return a:default
-  endif
-endfunction
+" function! s:Expr(default, repl)
+"   if getline('.')[col('.')-2]=='\'
+"     return "\<bs>".a:repl
+"   else
+"     return a:default
+"   endif
+" endfunction
+
+set iskeyword+=\
 
 " LaTeX-specific Mappings
-inoreabb <buffer> docu <c-r>=<sid>Expr('docu', '\documentclass[<++>]{<++>}')<cr>
-inoreabb <buffer> use[ <c-r>=<sid>Expr('use[', '\usepackage[<++>]{<++>}')<cr>
-inoreabb <buffer> usep <c-r>=<sid>Expr('usep', '\usepackage{<++>}')<cr>
-inoreabb <buffer> part <c-r>=<sid>Expr('part', '\part{<++>}')<cr>
-inoreabb <buffer> chap <c-r>=<sid>Expr('chap', '\chapter{<++>}')<cr>
-inoreabb <buffer> sect <c-r>=<sid>Expr('sect', '\section{<++>}')<cr>
-inoreabb <buffer> subs <c-r>=<sid>Expr('subs', '\subsection{<++>}')<cr>
-inoreabb <buffer> sub2 <c-r>=<sid>Expr('sub2', '\subsubsection{<++>}')<cr>
-inoremap <buffer> ` `'<++><Esc>5ha
-inoremap <buffer> $$ \[ <++> \]<++>
-inoremap <buffer> [[ \left[<++>\right]<++>
-inoremap <buffer> {{ \left\{<++>\right\}<++>
-inoremap <buffer> (( \left(<++>\right)<++>
+inoreabb <buffer> \docu \documentclass[]{<++>}<Esc>6hi
+inoreabb <buffer> \useo \usepackage[]{<++>}<Esc>6hi
+inoreabb <buffer> \usep \usepackage{}<Left>
+inoreabb <buffer> \part \part{}<Left>
+inoreabb <buffer> \chap \chapter{}<Left>
+inoreabb <buffer> \sect \section{}<Left>
+inoreabb <buffer> \subs \subsection{}<Left>
+inoreabb <buffer> \sub2 \subsubsection{}<Left>
+inoreabb <buffer> \frac \frac{}{<++>}<++><Esc>10hi
+inoremap <buffer> ` `'<++><Esc>4hi
+inoremap <buffer> $ $$<++><Esc>4hi
+inoremap <buffer> \[ \[  \]<++><Esc>6hi
+inoremap <buffer> [[ \left[\right]<++><Esc>10hi
+inoremap <buffer> {{ \left\{\right\}<++><Esc>11hi
+inoremap <buffer> (( \left(\right)<++><Esc>10hi
 
 " Invoking PDFLaTeX
-nnoremap <buffer> <F5> :w<CR>:!pdflatex %:p<CR>
+nnoremap <buffer> <F5> :cd %:p:h<CR>:w<CR>:!pdflatex %<CR>
+nnoremap <buffer> <C-F5> :cd %:p:h<CR>:w<CR>:!pdflatex %<CR><CR>:!pdflatex %<CR>
