@@ -1,6 +1,6 @@
+set mouse=a
 " Behave MS Windows
 runtime mswin.vim
-set mouse=a
 
 set noundofile | "No Undo Files
 
@@ -17,6 +17,7 @@ call plug#begin('$XDG_CONFIG_HOME/nvim/plugged')
     Plug 'vim-latex/vim-latex' | " Installed Vim-Latex, a LaTeX Plugin
     Plug 'tpope/vim-fugitive' | " Installed fugitive.vim, a Git wrapper
     Plug 'nathanaelkane/vim-indent-guides' | " Installed vim-indent-guides, a visual indentation guide
+    Plug 'sakhnik/nvim-gdb', {'do':':!./install.sh \| UpdateRemotePlugins'} | "Installed nvim-gdb, a Neovim Wrapper for GDB
 call plug#end()
 
 filetype off
@@ -40,6 +41,7 @@ set expandtab | set shiftwidth=4 | set tabstop=4 | set softtabstop=4 | set smart
 set cursorline | set cursorcolumn
 set breakindent | set linebreak
 :set iskeyword+=\
+let g:tex_flavor = "latex"
 
 " Set Mappings for Vimscript and Vanilla Vim Management
 nnoremap <F1> :cd $XDG_CONFIG_HOME/nvim<CR>:e init.vim<CR>| "Press F1 to Open User init.vim
