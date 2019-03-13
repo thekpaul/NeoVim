@@ -42,6 +42,7 @@ set cursorline | set cursorcolumn
 set breakindent | set linebreak
 :set iskeyword+=\
 let g:tex_flavor = "latex"
+set exrc | set secure | "Avail securely importing project-specific config files
 
 " Set Mappings for Vimscript and Vanilla Vim Management
 nnoremap <F1> :cd $XDG_CONFIG_HOME/nvim<CR>:e init.vim<CR>| "Press F1 to Open User init.vim
