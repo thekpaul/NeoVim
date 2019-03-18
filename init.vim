@@ -4,8 +4,6 @@ runtime mswin.vim
 
 set noundofile | "No Undo Files
 
-" let g:python3_host_prog = 'C:/Users/brigh/path/to/python' | "Python 3
-
 " Vim-Plug as Plugin Manager
 call plug#begin('$XDG_CONFIG_HOME/nvim/plugged')
     Plug 'sudar/vim-arduino-syntax' | " Installed Arduino Syntax
@@ -18,6 +16,7 @@ call plug#begin('$XDG_CONFIG_HOME/nvim/plugged')
     Plug 'tpope/vim-fugitive' | " Installed fugitive.vim, a Git wrapper
     Plug 'nathanaelkane/vim-indent-guides' | " Installed vim-indent-guides, a visual indentation guide
     Plug 'sakhnik/nvim-gdb', {'do':':!./install.sh \| UpdateRemotePlugins'} | "Installed nvim-gdb, a Neovim Wrapper for GDB
+  " Plug '~/local-config-reader' | " Installed Local-Config-Reader, a secure local configuration reader
 call plug#end()
 
 filetype off
@@ -42,7 +41,6 @@ set cursorline | set cursorcolumn
 set breakindent | set linebreak
 :set iskeyword+=\
 let g:tex_flavor = "latex"
-set exrc | set secure | "Avail securely importing project-specific config files
 
 " Set Mappings for Vimscript and Vanilla Vim Management
 nnoremap <F1> :cd $XDG_CONFIG_HOME/nvim<CR>:e init.vim<CR>| "Press F1 to Open User init.vim
@@ -53,8 +51,6 @@ nnoremap <F3> :cd %:p:h<CR>| "Press F3 to Change Working Directory to Current Fi
 nnoremap <F4> :call delete(expand('%'))<CR>| "Press F4 to delete Current File
 nnoremap <C-F4> :call delete(expand('%'))<CR>:bdelete!<CR>| "Press Ctrl+F4 to delete Current File and quit buffer
 nnoremap <F10> :w<CR>:source %<CR>| "Press F10 to Save and Reload Current File
-nnoremap "o 0i"<space><esc>| "Press Quotation Mark then o to State a Comment in Vimscript
-nnoremap "x 0xx| "Press Quotation Mark then x to De-comment in Vimscript
 
 " AutoClose
 inoremap " ""<lt>++><Esc>5ha
@@ -64,9 +60,13 @@ inoremap [ []<lt>++><Esc>5ha
 inoremap { {}<lt>++><Esc>5ha
 inoremap {<CR> {<CR>}<ESC>O
 inoremap {;<CR> {<CR>};<ESC>O
+
 if (&ft != 'tex')
     inoremap ` ``<lt>++><Esc>5ha
 endif
+
+" LangMap Settings
+set langmap=ㅂq,ㅃQ,ㅈw,ㅉW,ㄷe,ㄸE,ㄱr,ㄲR,ㅅt,ㅆT,ㅛy,ㅕu,ㅑi,ㅐo,ㅒO,ㅔp,ㅖP,ㅁa,ㄴs,ㅇd,ㄹf,ㅎg,ㅗh,ㅓj,ㅏk,ㅣl,ㅋz,ㅌx,ㅊc,ㅍv,ㅠb,ㅜn,ㅡm
 
 " Additional Settings for the Vim-Plug Plugin
 nnoremap <F12> :PlugInstall<CR>| " Press F12 to Install new Plugins
