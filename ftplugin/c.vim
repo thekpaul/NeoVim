@@ -8,7 +8,7 @@ nnoremap <buffer> #inc<Space> i#include <lt>><left>
 iabbrev <buffer> #inc #include <lt>><left>
 
 " For Single-File Codes : Save, Compile and Run
-nnoremap <buffer> <F5> :w<CR>:!gcc % -o %<.exe<CR><CR>:!%<.exe<CR>
-nnoremap <buffer> <C-F5> :w<CR>:!gcc % -o %<.exe<CR><CR>:tabe<CR>:terminal<CR>3j$a
+nnoremap <buffer> <F5> :cd &:p:h<CR>:w<CR>:!gcc % -o %<.exe<CR><CR>:!%<.exe<CR>
+nnoremap <buffer> <C-F5> :cd &:p:h<CR>:w<CR>:!gcc % -o %<.exe<CR><CR>:tabe<CR>:terminal<CR>3j$agcc 
 
 " TODO: Multi-File Codes that require a Makefile
