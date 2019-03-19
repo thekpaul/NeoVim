@@ -34,7 +34,7 @@ set fileencodings=utf8 | "Set NEW File Encoding to UTF-8
     if (&fileencodings != 'utf8')
         set fileencodings=utf8
     endif | "Set ALL File Encoding to UTF-8
-set nu | "Line Numbering
+set relativenumber | "Relative Line Numbering
 set linespace=3 | "Set Line Spacing to 3 units
 set expandtab | set shiftwidth=4 | set tabstop=4 | set softtabstop=4 | set smarttab | "Set Tab Spacing
 set cursorline | set cursorcolumn
