@@ -34,6 +34,7 @@ set fileencodings=utf8 | "Set NEW File Encoding to UTF-8
     if (&fileencodings != 'utf8')
         set fileencodings=utf8
     endif | "Set ALL File Encoding to UTF-8
+set number | "Line Numbering
 set relativenumber | "Relative Line Numbering
 set linespace=3 | "Set Line Spacing to 3 units
 set expandtab | set shiftwidth=4 | set tabstop=4 | set softtabstop=4 | set smarttab | "Set Tab Spacing
@@ -45,6 +46,8 @@ let g:tex_flavor = "latex"
 " Set Mappings for Vimscript and Vanilla Vim Management
 nnoremap <F1> :cd $XDG_CONFIG_HOME/nvim<CR>:e init.vim<CR>| "Press F1 to Open User init.vim
 nnoremap <C-F1> :cd $VIM<CR>:e sysinit.vim<CR>| "Press Ctrl+F1 to Open System sysinit.vim
+nnoremap <S-F1> :cd $XDG_CONFIG_HOME/nvim<CR>:split init.vim<CR>| "Press F1 to Split-Open User init.vim
+nnoremap v<S-F1> :cd $XDG_CONFIG_HOME/nvim<CR>:vsplit init.vim<CR>| "Press F1 to VSplit-Open User init.vim
 nnoremap <F2> :tabe $XDG_CONFIG_HOME/nvim/init.vim<CR>:cd %:p:h<CR>| "Press F2 to Open User init.vim in New Tab
 nnoremap <C-F2> :tabe $VIM/sysinit.vim<CR>:cd %:p:h<CR>| "Press Ctrl+F2 to Open System sysinit.vim in New Tab
 nnoremap <F3> :cd %:p:h<CR>| "Press F3 to Change Working Directory to Current File
