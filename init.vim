@@ -112,4 +112,4 @@ autocmd BufEnter * if bufname('#') =~# "^NERD_tree_" | b# | endif | " If previou
 " Additional Settings for the vim-indent-guides Plugin
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_guide_size = 1
-let g:indent_guides_exclude_filetypes = ['help', 'nerdtree', 'startify']
+let g:indent_guides_exclude_filetypes = ['help', 'nerdtree', 'startify','']
