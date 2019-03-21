@@ -16,6 +16,7 @@ call plug#begin('$XDG_CONFIG_HOME/nvim/plugged')
     Plug 'tpope/vim-fugitive' | " Installed fugitive.vim, a Git wrapper
     Plug 'nathanaelkane/vim-indent-guides' | " Installed vim-indent-guides, a visual indentation guide
     Plug 'sakhnik/nvim-gdb', {'do':':!./install.sh \| UpdateRemotePlugins'} | "Installed nvim-gdb, a Neovim Wrapper for GDB
+    Plug 'ntpeters/vim-better-whitespace' | "Installed vim-better-whitespace, a visual whitespace manager
   " Plug '~/local-config-reader' | " Installed Local-Config-Reader, a secure local configuration reader
 call plug#end()
 
@@ -112,4 +113,8 @@ autocmd BufEnter * if bufname('#') =~# "^NERD_tree_" | b# | endif | " If previou
 " Additional Settings for the vim-indent-guides Plugin
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_guide_size = 1
-let g:indent_guides_exclude_filetypes = ['help', 'nerdtree', 'startify','']
+let g:indent_guides_exclude_filetypes = ['help', 'nerdtree', 'startify', ' ']
+
+"Additional Settings for the vim-better-whitespace Plugin
+let g:better_whitespace_ctermcolor = '#FFFFFF'
+let g:strip_whitespace_on_save = 1
