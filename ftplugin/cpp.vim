@@ -11,7 +11,7 @@ inoremap <buffer> /* /**/<left><left>
 
 " For Single-File Codes : Save, Compile, and Run
 nnoremap <buffer> <F5> :cd %:p:h<CR>:w<CR>:!g++ % -o %<.exe<CR><CR>:!%<.exe<CR>
-nnoremap <buffer> <C-F5> :cd %:p:h<CR>:w<CR>:!g++ % -o %<.exe<CR><CR>:tabe<CR>:terminal<CR>3j$a
+nnoremap <buffer> <C-F5> :cd %:p:h<CR>:w<CR>:!g++ % -o %<.exe<CR><CR>:tabe<CR>:terminal<CR>a
 nnoremap <buffer> <S-F5> :cd %:p:h<CR>:w<CR>:!g++ % -o %<.exe<CR>
 nnoremap <buffer> <C-S-F5> :cd %:p:h<CR>:!%<.exe<CR>
 
