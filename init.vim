@@ -69,6 +69,8 @@ inoremap { {}<lt>++><Esc>5ha
 inoremap {<CR> {<CR>}<ESC>O
 inoremap {;<CR> {<CR>};<ESC>O
 
+" TODO: AutoClose in Selection
+
 if (&ft != 'tex')
     inoremap ` ``<lt>++><Esc>5ha
 endif
