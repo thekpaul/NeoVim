@@ -17,6 +17,8 @@ call plug#begin('$XDG_CONFIG_HOME/nvim/plugged')
     Plug 'nathanaelkane/vim-indent-guides' | " Installed vim-indent-guides, a visual indentation guide
     Plug 'sakhnik/nvim-gdb', {'do':':!./install.sh \| UpdateRemotePlugins'} | "Installed nvim-gdb, a Neovim Wrapper for GDB
     Plug 'ntpeters/vim-better-whitespace' | "Installed vim-better-whitespace, a visual whitespace manager
+    Plug 'godlygeek/tabular' | "Installed tabular plugin
+    Plug 'plasticboy/vim-markdown' | "Installed vim-markdown
   " Plug '~/local-config-reader' | " Installed Local-Config-Reader, a secure local configuration reader
 call plug#end()
 
@@ -47,11 +49,13 @@ let g:tex_flavor = "latex"
 " Set Mappings for Vimscript and Vanilla Vim Management
 nnoremap <F1> :cd $XDG_CONFIG_HOME/nvim<CR>:e init.vim<CR>| "Press F1 to Open User init.vim
 nnoremap <C-F1> :cd $VIM<CR>:e sysinit.vim<CR>| "Press Ctrl+F1 to Open System sysinit.vim
-nnoremap <S-F1> :cd $XDG_CONFIG_HOME/nvim<CR>:split init.vim<CR>| "Press F1 to Split-Open User init.vim
-nnoremap v<S-F1> :cd $XDG_CONFIG_HOME/nvim<CR>:vsplit init.vim<CR>| "Press F1 to VSplit-Open User init.vim
+nnoremap <S-F1> :cd $XDG_CONFIG_HOME/nvim<CR>:split init.vim<CR>| "Press Shift+F1 to Split-Open User init.vim
+nnoremap v<S-F1> :cd $XDG_CONFIG_HOME/nvim<CR>:vsplit init.vim<CR>| "Press V and Shift+F1 to VSplit-Open User init.vim
 nnoremap <F2> :tabe $XDG_CONFIG_HOME/nvim/init.vim<CR>:cd %:p:h<CR>| "Press F2 to Open User init.vim in New Tab
 nnoremap <C-F2> :tabe $VIM/sysinit.vim<CR>:cd %:p:h<CR>| "Press Ctrl+F2 to Open System sysinit.vim in New Tab
 nnoremap <F3> :cd %:p:h<CR>| "Press F3 to Change Working Directory to Current File
+nnoremap <C-F3> :tcd %:p:h<CR>| "Press Ctrl+F3 to Change Working Directory to Current File only for Current Tab
+nnoremap <S-F3> :cd ..<CR>| "Press Shift+F3 to Change Working Directory to One Level Up
 nnoremap <F4> :call delete(expand('%'))<CR>| "Press F4 to delete Current File
 nnoremap <C-F4> :call delete(expand('%'))<CR>:bdelete!<CR>| "Press Ctrl+F4 to delete Current File and quit buffer
 nnoremap <F10> :w<CR>:source %<CR>| "Press F10 to Save and Reload Current File
