@@ -2,8 +2,8 @@ if (&ft != 'cpp')
     finish
 endif
 
-inorea <buffer> #inc<lt> #include <lt>><left>
-inorea <buffer> #inc""<++> #include ""<left>
+inoreabb <buffer> #inc<lt> #include <lt>><left>
+inoreabb <buffer> #inc""<++> #include ""<left>
 nnoremap <buffer> #inc<lt> i#include <lt>><left>
 nnoremap <buffer> #inc" i#include ""<left>
 nnoremap <buffer> #def<Space> i#define 
@@ -17,7 +17,7 @@ nnoremap <buffer> <C-S-F5> :cd %:p:h<CR>:!%<.exe<CR>
 
 " TODO: Multi-File Codes that require a Makefile
 
-iabbrev <buffer> class<CR> class <++> {<CR>
+inoreabb <buffer> class class <++> {<CR>
                           \<++><CR>
                           \} <++>;
 
