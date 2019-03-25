@@ -111,6 +111,7 @@ let g:startify_custom_header = [
             \ '     * Press Ctrl-F12 to Delete Plugins via Vim-Plug                     ']
 
 " Additional Settings for the NERDTree Plugin
+" TODO: NERDTree Opening is too long; needs change of directory, IMHO
 let g:NERDTreeMinimalUI = 1
 autocmd VimEnter * NERDTree | wincmd l
 autocmd BufEnter * if (!exists("t:NERDTreeBufName") ) | silent NERDTreeMirror | wincmd l | endif
