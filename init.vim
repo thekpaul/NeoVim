@@ -116,7 +116,6 @@ let g:NERDTreeMinimalUI = 1
 autocmd VimEnter * NERDTree | wincmd l
 autocmd BufEnter * if (!exists("t:NERDTreeBufName") ) | silent NERDTreeMirror | wincmd l | endif
 autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-autocmd BufEnter * if bufname('#') =~# "^NERD_tree_" | b# | endif | " If previous buffer was NERDTree, go back to it
 
 " Additional Settings for the vim-indent-guides Plugin
 let g:indent_guides_enable_on_vim_startup = 1
