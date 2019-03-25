@@ -10,5 +10,5 @@
 .DocumentRevisions-V100
 
 # Files that are NOT MINE
-autoload/plug.vim
+autoload/*
 plugged/*
