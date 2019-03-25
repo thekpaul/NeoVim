@@ -1,4 +1,5 @@
 set mouse=a
+set clipboard=unnamedplus
 " Behave MS Windows
 runtime mswin.vim
 
