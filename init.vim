@@ -120,8 +120,9 @@ autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " Additional Settings for the vim-indent-guides Plugin
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_guide_size = 1
-let g:indent_guides_exclude_filetypes = ['help', 'nerdtree', 'startify', ' ']
+let g:indent_guides_exclude_filetypes = ['help', 'nerdtree', 'startify']
 
 "Additional Settings for the vim-better-whitespace Plugin
 let g:better_whitespace_ctermcolor = '#FFFFFF'
 let g:strip_whitespace_on_save = 1
+let g:better_whitespace_filetypes_blacklist = ['help', 'nerdtree', 'startify']
