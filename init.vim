@@ -43,10 +43,10 @@ set relativenumber | "Relative Line Numbering
 set linespace=3 | "Set Line Spacing to 3 units
 set expandtab | set shiftwidth=4 | set tabstop=4 | set softtabstop=4 | set smarttab | "Set Tab Spacing
 set cursorline
-augroup CursorLine
+augroup CursorColumn
     au!
-    au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
-    au WinLeave * setlocal nocursorline
+    au VimEnter,WinEnter,BufWinEnter * setlocal cursorcolumn
+    au WinLeave * setlocal nocursorcolumn
 augroup END
 set breakindent | set linebreak
 :set iskeyword+=\
