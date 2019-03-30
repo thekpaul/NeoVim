@@ -118,7 +118,7 @@ let g:startify_custom_header = [
 " Additional Settings for the NERDTree Plugin
 autocmd BufEnter * silent! lcd %:p:h
 let g:NERDTreeMinimalUI = 1
-autocmd VimEnter * NERDTree | wincmd l
+autocmd VimEnter * NERDTree $HOME | wincmd l
 autocmd BufEnter * if (!exists("t:NERDTreeBufName") ) | silent NERDTreeMirror | wincmd l | endif
 autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
