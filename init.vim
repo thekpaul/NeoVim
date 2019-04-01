@@ -41,7 +41,6 @@ set fileencodings=utf8 | "Set NEW File Encoding to UTF-8
         set fileencodings=utf8
     endif | "Set ALL File Encoding to UTF-8
 set number | "Line Numbering
-set relativenumber | "Relative Line Numbering
 set linespace=3 | "Set Line Spacing to 3 units
 set expandtab | set shiftwidth=4 | set tabstop=4
 set softtabstop=4 | set smarttab | "Set Tab Spacing
@@ -134,6 +133,7 @@ let g:startify_custom_header = [
 " Additional Settings for the NERDTree Plugin
 autocmd BufEnter * silent! lcd %:p:h
 let g:NERDTreeMinimalUI = 1
+let g:NERDTreeWinSize = 30
 autocmd VimEnter * NERDTree $HOME | wincmd l
 autocmd BufEnter * if (!exists("t:NERDTreeBufName") ) | silent NERDTreeMirror | wincmd l | endif
 autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
