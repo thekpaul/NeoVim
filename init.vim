@@ -7,20 +7,22 @@ set noundofile | "No Undo Files
 
 " Vim-Plug as Plugin Manager
 call plug#begin('$XDG_CONFIG_HOME/nvim/plugged')
-    Plug 'sudar/vim-arduino-syntax' | " Installed Arduino Syntax
     Plug 'mhinz/vim-startify' | " Installed Vim-Startify
     Plug 'scrooloose/nerdtree' | " Installed NERDTree
     Plug 'vim-airline/vim-airline' | " Installed Vim-Airline
     Plug 'junegunn/seoul256.vim' | " Installed Seoul256 Theme
-    Plug 'luochen1990/rainbow' | " Installed Rainbow, a Parentheses Colorscheme
     Plug 'vim-latex/vim-latex' | " Installed Vim-Latex, a LaTeX Plugin
     Plug 'tpope/vim-fugitive' | " Installed fugitive.vim, a Git wrapper
-    Plug 'nathanaelkane/vim-indent-guides' | " Installed vim-indent-guides, a visual indentation guide
-    Plug 'sakhnik/nvim-gdb', {'do':':!./install.sh \| UpdateRemotePlugins'} | "Installed nvim-gdb, a Neovim Wrapper for GDB
-    Plug 'ntpeters/vim-better-whitespace' | "Installed vim-better-whitespace, a visual whitespace manager
+    Plug 'nathanaelkane/vim-indent-guides'
+        " Installed vim-indent-guides, a visual indentation guide
+    Plug 'sakhnik/nvim-gdb', {'do':':!./install.sh \| UpdateRemotePlugins'}
+        "Installed nvim-gdb, a GDB Wrapper for Neovim
+    Plug 'ntpeters/vim-better-whitespace'
+        "Installed vim-better-whitespace, a visual whitespace manager
     Plug 'godlygeek/tabular' | "Installed tabular plugin
     Plug 'plasticboy/vim-markdown' | "Installed vim-markdown
-  " Plug '~/local-config-reader' | " Installed Local-Config-Reader, a secure local configuration reader
+  " Plug '~/local-config-reader'
+        " Installed Local-Config-Reader, a secure local configuration reader
 call plug#end()
 
 filetype off
@@ -41,7 +43,8 @@ set fileencodings=utf8 | "Set NEW File Encoding to UTF-8
 set number | "Line Numbering
 set relativenumber | "Relative Line Numbering
 set linespace=3 | "Set Line Spacing to 3 units
-set expandtab | set shiftwidth=4 | set tabstop=4 | set softtabstop=4 | set smarttab | "Set Tab Spacing
+set expandtab | set shiftwidth=4 | set tabstop=4
+set softtabstop=4 | set smarttab | "Set Tab Spacing
 set cursorline
 augroup CursorColumn
     au!
@@ -51,19 +54,31 @@ augroup END
 set breakindent | set linebreak
 :set iskeyword+=\
 let g:tex_flavor = "latex"
+set colorcolumn=80
 
 " Set Mappings for Vimscript and Vanilla Vim Management
-nnoremap <F1> :cd $XDG_CONFIG_HOME/nvim<CR>:e init.vim<CR>| "Press F1 to Open User init.vim
-nnoremap <C-F1> :cd $VIM<CR>:e sysinit.vim<CR>| "Press Ctrl+F1 to Open System sysinit.vim
-nnoremap <S-F1> :cd $XDG_CONFIG_HOME/nvim<CR>:split init.vim<CR>| "Press Shift+F1 to Split-Open User init.vim
-nnoremap v<S-F1> :cd $XDG_CONFIG_HOME/nvim<CR>:vsplit init.vim<CR>| "Press V and Shift+F1 to VSplit-Open User init.vim
-nnoremap <F2> :tabe $XDG_CONFIG_HOME/nvim/init.vim<CR>:cd %:p:h<CR>| "Press F2 to Open User init.vim in New Tab
-nnoremap <C-F2> :tabe $VIM/sysinit.vim<CR>:cd %:p:h<CR>| "Press Ctrl+F2 to Open System sysinit.vim in New Tab
-nnoremap <F3> :cd %:p:h<CR>| "Press F3 to Change Working Directory to Current File
-nnoremap <C-F3> :tcd %:p:h<CR>| "Press Ctrl+F3 to Change Working Directory to Current File only for Current Tab
-nnoremap <S-F3> :cd ..<CR>| "Press Shift+F3 to Change Working Directory to One Level Up
-nnoremap <F4> :call delete(expand('%'))<CR>| "Press F4 to delete Current File
-nnoremap <C-F4> :call delete(expand('%'))<CR>:bdelete!<CR>| "Press Ctrl+F4 to delete Current File and quit buffer
+nnoremap <F1> :cd $XDG_CONFIG_HOME/nvim<CR>:e init.vim<CR>
+    "Press F1 to Open User init.vim
+nnoremap <C-F1> :cd $VIM<CR>:e sysinit.vim<CR>
+    "Press Ctrl+F1 to Open System sysinit.vim
+nnoremap <S-F1> :cd $XDG_CONFIG_HOME/nvim<CR>:split init.vim<CR>
+    "Press Shift+F1 to Split-Open User init.vim
+nnoremap v<S-F1> :cd $XDG_CONFIG_HOME/nvim<CR>:vsplit init.vim<CR>
+    "Press V and Shift+F1 to VSplit-Open User init.vim
+nnoremap <F2> :tabe $XDG_CONFIG_HOME/nvim/init.vim<CR>:cd %:p:h<CR>
+    "Press F2 to Open User init.vim in New Tab
+nnoremap <C-F2> :tabe $VIM/sysinit.vim<CR>:cd %:p:h<CR>
+    "Press Ctrl+F2 to Open System sysinit.vim in New Tab
+nnoremap <F3> :cd %:p:h<CR>
+    "Press F3 to Change Working Directory to Current File
+nnoremap <C-F3> :tcd %:p:h<CR>
+    "Press Ctrl+F3 to Change Working Directory to Current File only for Current Tab
+nnoremap <S-F3> :cd ..<CR>
+    "Press Shift+F3 to Change Working Directory to One Level Up
+nnoremap <F4> :call delete(expand('%'))<CR>
+    "Press F4 to delete Current File
+nnoremap <C-F4> :call delete(expand('%'))<CR>:bdelete!<CR>
+    "Press Ctrl+F4 to delete Current File and quit buffer
 nnoremap <F10> :w<CR>:source %<CR>| "Press F10 to Save and Reload Current File
 
 " AutoClose
@@ -82,7 +97,8 @@ if (&ft != 'tex')
 endif
 
 " LangMap Settings
-set langmap=ㅂq,ㅃQ,ㅈw,ㅉW,ㄷe,ㄸE,ㄱr,ㄲR,ㅅt,ㅆT,ㅛy,ㅕu,ㅑi,ㅐo,ㅒO,ㅔp,ㅖP,ㅁa,ㄴs,ㅇd,ㄹf,ㅎg,ㅗh,ㅓj,ㅏk,ㅣl,ㅋz,ㅌx,ㅊc,ㅍv,ㅠb,ㅜn,ㅡm
+set langmap=ㅂq,ㅃQ,ㅈw,ㅉW,ㄷe,ㄸE,ㄱr,ㄲR,ㅅt,ㅆT,ㅛy,ㅕu,ㅑi,ㅐo,ㅒO,ㅔp,ㅖP,
+    \ㅁa,ㄴs,ㅇd,ㄹf,ㅎg,ㅗh,ㅓj,ㅏk,ㅣl,ㅋz,ㅌx,ㅊc,ㅍv,ㅠb,ㅜn,ㅡm
 
 " Additional Settings for the Vim-Plug Plugin
 nnoremap <F12> :PlugInstall<CR>| " Press F12 to Install new Plugins
@@ -96,24 +112,24 @@ highlight EndOfBuffer guifg=bg | "Hide Tildes in Empty Buffer Space
 
 " Additional Settings for the Startify Plugin
 let g:startify_custom_header = [
-            \ '                                 __ __                                   ',
-            \ '               __               /\ \\ \                                  ',
-            \ '      __   __ /\_\    ___ ___   \ \ \\ \                                 ',
-            \ '     /\ \ /\ \\/\ \ /` __` __`\  \ \ \\ \                                ',
-            \ '     \ \ \_/ / \ \ \/\ \/\ \/\ \  \ \_\\_\                               ',
-            \ '      \ \___/   \ \_\ \_\ \_\ \_\  \/\_\\_\                              ',
-            \ '       \/__/     \/_/\/_/\/_/\/_/   \/_//_/                              ',
-            \ '                                                                         ',
-            \ '                                                                         ',
-            \ '     * Press F1 to Open User init.vim                                    ',
-            \ '     * Press Ctrl-F1 to Open System sysinit.vim                          ',
-            \ '     * Press F2 to Open User init.vim in New Tab                         ',
-            \ '     * Press Ctrl-F2 to Open System sysinit.vim in New Tab               ',
-            \ '     * Press F3 to Change Working Directory to that of Current File      ',
-            \ '     * Press F10 to Save and Source a Vimscript File                     ',
-            \ '     * Press F11 to Update Plugins via Vim-Plug                          ',
-            \ '     * Press F12 to Install new Plugins via Vim-Plug                     ',
-            \ '     * Press Ctrl-F12 to Delete Plugins via Vim-Plug                     ']
+\ '                                 __ __                                   ',
+\ '               __               /\ \\ \                                  ',
+\ '      __   __ /\_\    ___ ___   \ \ \\ \                                 ',
+\ '     /\ \ /\ \\/\ \ /` __` __`\  \ \ \\ \                                ',
+\ '     \ \ \_/ / \ \ \/\ \/\ \/\ \  \ \_\\_\                               ',
+\ '      \ \___/   \ \_\ \_\ \_\ \_\  \/\_\\_\                              ',
+\ '       \/__/     \/_/\/_/\/_/\/_/   \/_//_/                              ',
+\ '                                                                         ',
+\ '                                                                         ',
+\ '     * Press F1 to Open User init.vim                                    ',
+\ '     * Press Ctrl-F1 to Open System sysinit.vim                          ',
+\ '     * Press F2 to Open User init.vim in New Tab                         ',
+\ '     * Press Ctrl-F2 to Open System sysinit.vim in New Tab               ',
+\ '     * Press F3 to Change Working Directory to that of Current File      ',
+\ '     * Press F10 to Save and Source a Vimscript File                     ',
+\ '     * Press F11 to Update Plugins via Vim-Plug                          ',
+\ '     * Press F12 to Install new Plugins via Vim-Plug                     ',
+\ '     * Press Ctrl-F12 to Delete Plugins via Vim-Plug                     ']
 
 " Additional Settings for the NERDTree Plugin
 autocmd BufEnter * silent! lcd %:p:h
