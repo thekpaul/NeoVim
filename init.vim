@@ -82,18 +82,17 @@ nnoremap <F10> :w<CR>:source %<CR>| "Press F10 to Save and Reload Current File
 
 " AutoClose
 inoremap " ""<lt>++><Esc>5ha
-inoremap ' ''<lt>++><Esc>5ha
 inoremap ( ()<lt>++><Esc>5ha
 inoremap [ []<lt>++><Esc>5ha
 inoremap { {}<lt>++><Esc>5ha
 inoremap {<CR> {<CR>}<ESC>O
 inoremap {;<CR> {<CR>};<ESC>O
-
-" TODO: AutoClose in Selection
-
 if (&ft != 'tex')
+    inoremap ' ''<lt>++><Esc>5ha
     inoremap ` ``<lt>++><Esc>5ha
 endif
+
+" TODO: AutoClose in Selection
 
 " LangMap Settings
 set langmap=ㅂq,ㅃQ,ㅈw,ㅉW,ㄷe,ㄸE,ㄱr,ㄲR,ㅅt,ㅆT,ㅛy,ㅕu,ㅑi,ㅐo,ㅒO,ㅔp,ㅖP,
