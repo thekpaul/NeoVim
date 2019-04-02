@@ -131,7 +131,6 @@ let g:startify_custom_header = [
 \ '     * Press Ctrl-F12 to Delete Plugins via Vim-Plug                     ']
 
 " Additional Settings for the NERDTree Plugin
-autocmd BufEnter * silent! lcd %:p:h
 let g:NERDTreeMinimalUI = 1
 let g:NERDTreeWinSize = 30
 autocmd VimEnter * NERDTree $HOME | wincmd l
