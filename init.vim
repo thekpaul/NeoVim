@@ -94,14 +94,20 @@ endif
 
 " TODO: AutoClose in Selection
 
+" Automatic Soft Tab Usage
+autocmd FileReadPre * if(&modifiable == 1) | retab | w | endif
+
 " LangMap Settings
 set langmap=ㅂq,ㅃQ,ㅈw,ㅉW,ㄷe,ㄸE,ㄱr,ㄲR,ㅅt,ㅆT,ㅛy,ㅕu,ㅑi,ㅐo,ㅒO,ㅔp,ㅖP,
     \ㅁa,ㄴs,ㅇd,ㄹf,ㅎg,ㅗh,ㅓj,ㅏk,ㅣl,ㅋz,ㅌx,ㅊc,ㅍv,ㅠb,ㅜn,ㅡm
 
 " Additional Settings for the Vim-Plug Plugin
-nnoremap <F12> :PlugInstall<CR>| " Press F12 to Install new Plugins
-nnoremap <C-F12> :PlugClean<CR>| " Press Ctrl+F12 to Delete Plugins
-nnoremap <F11> :PlugUpdate<CR>| " Press F11 to Update new Plugins
+nnoremap <F12> :PlugInstall<CR>
+    " Press F12 to Install new Plugins
+nnoremap <C-F12> :PlugClean<CR>
+    " Press Ctrl+F12 to Delete Plugins
+nnoremap <F11> :PlugUpdate<CR>
+    " Press F11 to Update new Plugins
 
 " Additional Settings for the Seoul256 Plugin
 let g:seoul256_background = 235
@@ -110,24 +116,24 @@ highlight EndOfBuffer guifg=bg | "Hide Tildes in Empty Buffer Space
 
 " Additional Settings for the Startify Plugin
 let g:startify_custom_header = [
-\ '                                 __ __                                   ',
-\ '               __               /\ \\ \                                  ',
-\ '      __   __ /\_\    ___ ___   \ \ \\ \                                 ',
-\ '     /\ \ /\ \\/\ \ /` __` __`\  \ \ \\ \                                ',
-\ '     \ \ \_/ / \ \ \/\ \/\ \/\ \  \ \_\\_\                               ',
-\ '      \ \___/   \ \_\ \_\ \_\ \_\  \/\_\\_\                              ',
-\ '       \/__/     \/_/\/_/\/_/\/_/   \/_//_/                              ',
-\ '                                                                         ',
-\ '                                                                         ',
-\ '     * Press F1 to Open User init.vim                                    ',
-\ '     * Press Ctrl-F1 to Open System sysinit.vim                          ',
-\ '     * Press F2 to Open User init.vim in New Tab                         ',
-\ '     * Press Ctrl-F2 to Open System sysinit.vim in New Tab               ',
-\ '     * Press F3 to Change Working Directory to that of Current File      ',
-\ '     * Press F10 to Save and Source a Vimscript File                     ',
-\ '     * Press F11 to Update Plugins via Vim-Plug                          ',
-\ '     * Press F12 to Install new Plugins via Vim-Plug                     ',
-\ '     * Press Ctrl-F12 to Delete Plugins via Vim-Plug                     ']
+\ '                                 __ __                                     ',
+\ '               __               /\ \\ \                                    ',
+\ '      __   __ /\_\    ___ ___   \ \ \\ \                                   ',
+\ '     /\ \ /\ \\/\ \ /` __` __`\  \ \ \\ \                                  ',
+\ '     \ \ \_/ / \ \ \/\ \/\ \/\ \  \ \_\\_\                                 ',
+\ '      \ \___/   \ \_\ \_\ \_\ \_\  \/\_\\_\                                ',
+\ '       \/__/     \/_/\/_/\/_/\/_/   \/_//_/                                ',
+\ '                                                                           ',
+\ '                                                                           ',
+\ '     * Press F1 to Open User init.vim                                      ',
+\ '     * Press Ctrl-F1 to Open System sysinit.vim                            ',
+\ '     * Press F2 to Open User init.vim in New Tab                           ',
+\ '     * Press Ctrl-F2 to Open System sysinit.vim in New Tab                 ',
+\ '     * Press F3 to Change Working Directory to that of Current File        ',
+\ '     * Press F10 to Save and Source a Vimscript File                       ',
+\ '     * Press F11 to Update Plugins via Vim-Plug                            ',
+\ '     * Press F12 to Install new Plugins via Vim-Plug                       ',
+\ '     * Press Ctrl-F12 to Delete Plugins via Vim-Plug                       ']
 
 " Additional Settings for the NERDTree Plugin
 let g:NERDTreeMinimalUI = 1
