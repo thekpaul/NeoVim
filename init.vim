@@ -71,7 +71,7 @@ nnoremap <C-F2> :tabe $VIM/sysinit.vim<CR>:cd %:p:h<CR>
 nnoremap <F3> :cd %:p:h<CR>
     "Press F3 to Change Working Directory to Current File
 nnoremap <C-F3> :tcd %:p:h<CR>
-    "Press Ctrl+F3 to Change Working Directory to Current File only for Current Tab
+    "Press Ctrl+F3 to Change Working Directory to Current File for Current Tab
 nnoremap <S-F3> :cd ..<CR>
     "Press Shift+F3 to Change Working Directory to One Level Up
 nnoremap <F4> :call delete(expand('%'))<CR>
