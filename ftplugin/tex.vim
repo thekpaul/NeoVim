@@ -47,8 +47,8 @@ inoremap <buffer> @E \Epsilon
 inoremap <buffer> @e \epsilon
 inoremap <buffer> @F \Phi
 inoremap <buffer> @f \phi
-inoremap <buffer> @G \Gammaa
-inoremap <buffer> @g \gammaa
+inoremap <buffer> @G \Gamma
+inoremap <buffer> @g \gamma
 inoremap <buffer> @H \Eta
 inoremap <buffer> @h \eta
 inoremap <buffer> @I \Iota
@@ -84,6 +84,12 @@ inoremap <buffer> @y \psi
 inoremap <buffer> @Z \Zeta
 inoremap <buffer> @z \zeta
 inoremap <buffer> @vf \varphi
+inoremap <buffer> @ve \varepsilon
+inoremap <buffer> @vr \varrho
+inoremap <buffer> @vk \varkappa
+inoremap <buffer> @vq \vartheta
+inoremap <buffer> @vs \varsigma
+inoremap <buffer> @vp \varpi
 inoremap <buffer> @ve \varepsilon
 inoremap <buffer> @vr \varrho
 
