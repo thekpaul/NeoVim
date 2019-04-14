@@ -81,7 +81,6 @@ nnoremap <C-F4> :call delete(expand('%'))<CR>:bdelete!<CR>
 nnoremap <F10> :w<CR>:source %<CR>| "Press F10 to Save and Reload Current File
 
 " AutoClose
-inoremap " ""<lt>++><Esc>5ha
 inoremap ( ()<lt>++><Esc>5ha
 inoremap [ []<lt>++><Esc>5ha
 inoremap { {}<lt>++><Esc>5ha
@@ -90,6 +89,7 @@ inoremap {;<CR> {<CR>};<ESC>O
 if (&ft != 'tex')
     inoremap ' ''<lt>++><Esc>5ha
     inoremap ` ``<lt>++><Esc>5ha
+    inoremap " ""<lt>++><Esc>5ha
 endif
 
 " TODO: AutoClose in Selection
