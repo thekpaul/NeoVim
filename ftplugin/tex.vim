@@ -17,6 +17,10 @@ let b:suppress_latex_suite = 1
 
 set iskeyword+=\
 
+" Prevent Worldwide Mappings
+inoremap <buffer> ' '
+inoremap <buffer> " "
+
 " LaTeX-specific Mappings
 inoreabb <buffer> \docu \documentclass[]{<++>}<Esc>6hi
 inoreabb <buffer> \useo \usepackage[]{<++>}<Esc>6hi
@@ -28,6 +32,7 @@ inoreabb <buffer> \subs \subsection{}<Left>
 inoreabb <buffer> \sub2 \subsubsection{}<Left>
 inoreabb <buffer> \frac \frac{}{<++>}<++><Esc>10hi
 inoremap <buffer> ` `'<++><Esc>4hi
+inoremap <buffer> `` ``"<++><Esc>4hi
 inoremap <buffer> $ $$<++><Esc>4hi
 inoremap <buffer> \[ \[  \]<++><Esc>6hi
 inoremap <buffer> [[ \left[\right]<++><Esc>10hi
