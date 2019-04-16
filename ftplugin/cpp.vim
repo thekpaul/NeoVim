@@ -8,8 +8,7 @@ nnoremap <buffer> #inc<lt> i#include <lt>><left>
 nnoremap <buffer> #inc" i#include ""<left>
 nnoremap <buffer> #def<Space> i#define 
 inoremap <buffer> /* /**/<left><left>
-inoreabb <buffer> cout cout <lt><lt> 
-inoreabb <buffer> endl endl;
+inoreabb <buffer> cout cout <lt><lt>
 
 " For Single-File Codes : Save, Compile, and Run
 nnoremap <buffer> <F5> :cd %:p:h<CR>:w<CR>:!g++ % -o %<.exe<CR><CR>:!%<.exe<CR>
