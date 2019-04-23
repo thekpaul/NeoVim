@@ -99,6 +99,6 @@ inoremap <buffer> @ve \varepsilon
 inoremap <buffer> @vr \varrho
 
 " Invoking PDFLaTeX
-nnoremap <buffer> <F5> :w<CR>:!pdflatex %<CR>
-nnoremap <buffer> <C-F5> :w<CR>:!pdflatex %<CR><CR>:!pdflatex %<CR>
-nnoremap <buffer> <S-F5> :w<CR>:!pdflatex -shell-escape %<CR>
+nnoremap <buffer> <F5> :cd %:p:h<CR>:w<CR>:!pdflatex %<CR>
+nnoremap <buffer> <C-F5> :cd %:p:h<CR>:w<CR>:!pdflatex %<CR><CR>:!pdflatex %<CR>
+nnoremap <buffer> <S-F5> :cd %:p:h<CR>:w<CR>:!pdflatex -shell-escape %<CR>
