@@ -4,7 +4,6 @@ endif
 
 inoreabb <buffer> #inc<lt> #include <lt>><left>
 inoreabb <buffer> #inc" #include ""<left>
-inoreabb <buffer> #def #define
 nnoremap <buffer> #inc<lt> i#include <lt>><left>
 nnoremap <buffer> #inc" i#include ""<left>
 nnoremap <buffer> #def<Space> i#define
