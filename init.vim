@@ -95,7 +95,7 @@ endif
 " TODO: AutoClose in Selection
 
 " Automatic Soft Tab Usage
-" autocmd FileReadPre * if(&modifiable == 1) | retab | w | endif
+autocmd FileReadPre * if(&modifiable == 1) | retab | w | endif
 
 " LangMap Settings
 set langmap=ㅂq,ㅃQ,ㅈw,ㅉW,ㄷe,ㄸE,ㄱr,ㄲR,ㅅt,ㅆT,ㅛy,ㅕu,ㅑi,ㅐo,ㅒO,ㅔp,ㅖP,
