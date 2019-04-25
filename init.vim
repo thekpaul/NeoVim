@@ -116,24 +116,26 @@ highlight EndOfBuffer guifg=bg | "Hide Tildes in Empty Buffer Space
 
 " Additional Settings for the Startify Plugin
 let g:startify_custom_header = [
-\ '                                 __ __                                     ',
-\ '               __               /\ \\ \                                    ',
-\ '      __   __ /\_\    ___ ___   \ \ \\ \                                   ',
-\ '     /\ \ /\ \\/\ \ /` __` __`\  \ \ \\ \                                  ',
-\ '     \ \ \_/ / \ \ \/\ \/\ \/\ \  \ \_\\_\                                 ',
-\ '      \ \___/   \ \_\ \_\ \_\ \_\  \/\_\\_\                                ',
-\ '       \/__/     \/_/\/_/\/_/\/_/   \/_//_/                                ',
+\ '                                __ __                                      ',
+\ '              __               /\ \\ \                                     ',
+\ '     __   __ /\_\    ___ ___   \ \ \\ \                                    ',
+\ '    /\ \ /\ \\/\ \ /` __` __`\  \ \ \\ \                                   ',
+\ '    \ \ \_/ / \ \ \/\ \/\ \/\ \  \ \_\\_\                                  ',
+\ '     \ \___/   \ \_\ \_\ \_\ \_\  \/\_\\_\                                 ',
+\ '      \/__/     \/_/\/_/\/_/\/_/   \/_//_/                                 ',
 \ '                                                                           ',
 \ '                                                                           ',
-\ '     * Press F1 to Open User init.vim                                      ',
-\ '     * Press Ctrl-F1 to Open System sysinit.vim                            ',
-\ '     * Press F2 to Open User init.vim in New Tab                           ',
-\ '     * Press Ctrl-F2 to Open System sysinit.vim in New Tab                 ',
-\ '     * Press F3 to Change Working Directory to that of Current File        ',
-\ '     * Press F10 to Save and Source a Vimscript File                       ',
-\ '     * Press F11 to Update Plugins via Vim-Plug                            ',
-\ '     * Press F12 to Install new Plugins via Vim-Plug                       ',
-\ '     * Press Ctrl-F12 to Delete Plugins via Vim-Plug                       ']
+\ '    * Always remember to DEL /s /q .exe for quiet, recursive .exe cleaning ',
+\ '                                                                           ',
+\ '    * Press F1 to Open User init.vim                                       ',
+\ '    * Press Ctrl-F1 to Open System sysinit.vim                             ',
+\ '    * Press F2 to Open User init.vim in New Tab                            ',
+\ '    * Press Ctrl-F2 to Open System sysinit.vim in New Tab                  ',
+\ '    * Press F3 to Change Working Directory to that of Current File         ',
+\ '    * Press F10 to Save and Source a Vimscript File                        ',
+\ '    * Press F11 to Update Plugins via Vim-Plug                             ',
+\ '    * Press F12 to Install new Plugins via Vim-Plug                        ',
+\ '    * Press Ctrl-F12 to Delete Plugins via Vim-Plug                        ']
 
 " Additional Settings for the NERDTree Plugin
 let g:NERDTreeMinimalUI = 1
