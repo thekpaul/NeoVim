@@ -32,7 +32,7 @@ inoreabb <buffer> \subs \subsection{}<Left>
 inoreabb <buffer> \sub2 \subsubsection{}<Left>
 inoreabb <buffer> \frac \frac{}{<++>}<++><Esc>10hi
 inoremap <buffer> ` `'<++><Esc>4hi
-inoremap <buffer> `` ``"<++><Esc>4hi
+inoremap <buffer> `` ``''<++><Esc>4hi
 inoremap <buffer> $ $$<++><Esc>4hi
 inoremap <buffer> \[ \[  \]<++><Esc>6hi
 inoremap <buffer> [[ \left[\right]<++><Esc>10hi
