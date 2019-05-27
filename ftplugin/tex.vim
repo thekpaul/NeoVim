@@ -88,7 +88,15 @@ inoremap <buffer> @Y \Psi
 inoremap <buffer> @y \psi
 inoremap <buffer> @Z \mathrm{Z}
 inoremap <buffer> @z \zeta
-inoremap <buffer> @vf \varphi
+inoremap <buffer> @Ve \Varepsilon
+inoremap <buffer> @Vr \Varrho
+inoremap <buffer> @Vk \Varkappa
+inoremap <buffer> @Vq \Vartheta
+inoremap <buffer> @Vs \Varsigma
+inoremap <buffer> @Vp \Varpi
+inoremap <buffer> @Ve \Varepsilon
+inoremap <buffer> @Vr \Varrho
+inoremap <buffer> @Vf \Varphi
 inoremap <buffer> @ve \varepsilon
 inoremap <buffer> @vr \varrho
 inoremap <buffer> @vk \varkappa
@@ -97,6 +105,7 @@ inoremap <buffer> @vs \varsigma
 inoremap <buffer> @vp \varpi
 inoremap <buffer> @ve \varepsilon
 inoremap <buffer> @vr \varrho
+inoremap <buffer> @vf \varphi
 
 " Invoking PDFLaTeX
 nnoremap <buffer> <F5> :cd %:p:h<CR>:w<CR>:!pdflatex %<CR>
