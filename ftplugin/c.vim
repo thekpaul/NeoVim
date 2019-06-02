@@ -5,7 +5,7 @@ endif
 
 inoremap <buffer> /* /**/<left><left>
 nnoremap <buffer> #inc<Space> i#include <lt>><left>
-inoreabb <silent> <buffer> #inc #include <lt>><left><c-r>=Eatchar('\m\s/')<cr>
+inoreabb <silent> <buffer> #inc #include <lt>><left><c-r>=Eatchar('\m\s\<bar>/')<cr>
 
 " For Single-File Codes : Save, Compile and Run
 nnoremap <buffer> <F5> :cd &:p:h<CR>:w<CR>:!gcc % -o %<.exe<CR><CR>:!%<.exe<CR>

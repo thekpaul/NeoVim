@@ -2,8 +2,8 @@ if (&ft != 'cpp')
     finish
 endif
 
-inoreabb <silent> <buffer> #inc<lt> #include <lt>><left><c-r>=Eatchar('\m\s/')<cr>
-inoreabb <silent> <buffer> #inc" #include ""<left><c-r>=Eatchar('\m\s/')<cr>
+inoreabb <silent> <buffer> #inc<lt> #include <lt>><left><c-r>=Eatchar('\m\s\<bar>/')<cr>
+inoreabb <silent> <buffer> #inc" #include ""<left><c-r>=Eatchar('\m\s\<bar>/')<cr>
 nnoremap <buffer> #inc<lt> i#include <lt>><left>
 nnoremap <buffer> #inc" i#include ""<left>
 nnoremap <buffer> #def<Space> i#define
@@ -21,7 +21,7 @@ nnoremap <buffer> <C-S-F5> :cd %:p:h<CR>:!%<.exe<CR>
 inoreabb <silent> <buffer> class class <++> {<CR>
                                     \<++><CR>
                                 \} <++>;
-                                \<c-r>=Eatchar('\m\s/')<cr>
+                                \<c-r>=Eatchar('\m\s\!/')<cr>
 
 nnoremap <buffer> <CR><CR><CR> i#include <lt>iostream><CR>
                                \<CR>
