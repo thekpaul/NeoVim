@@ -13,15 +13,24 @@ inoremap <buffer> ' '
 inoremap <buffer> " "
 
 " LaTeX-specific Mappings
-inoreabb <buffer> \docu \documentclass[]{<++>}<Esc>6hi
-inoreabb <buffer> \useo \usepackage[]{<++>}<Esc>6hi
-inoreabb <buffer> \usep \usepackage{}<Left>
-inoreabb <buffer> \part \part{}<Left>
-inoreabb <buffer> \chap \chapter{}<Left>
-inoreabb <buffer> \sect \section{}<Left>
-inoreabb <buffer> \subs \subsection{}<Left>
-inoreabb <buffer> \sub2 \subsubsection{}<Left>
-inoreabb <buffer> \frac \frac{}{<++>}<++><Esc>10hi
+inoreabb <silent> <buffer> \docu \documentclass[]{<++>}<Esc>6hi
+    \<c-r>=Eatchar('\m\s\<bar>/')<cr>
+inoreabb <silent> <buffer> \useo \usepackage[]{<++>}<Esc>6hi
+    \<c-r>=Eatchar('\m\s\<bar>/')<cr>
+inoreabb <silent> <buffer> \usep \usepackage{}<Left>
+    \<c-r>=Eatchar('\m\s\<bar>/')<cr>
+inoreabb <silent> <buffer> \part \part{}<Left>
+    \<c-r>=Eatchar('\m\s\<bar>/')<cr>
+inoreabb <silent> <buffer> \chap \chapter{}<Left>
+    \<c-r>=Eatchar('\m\s\<bar>/')<cr>
+inoreabb <silent> <buffer> \sect \section{}<Left>
+    \<c-r>=Eatchar('\m\s\<bar>/')<cr>
+inoreabb <silent> <buffer> \subs \subsection{}<Left>
+    \<c-r>=Eatchar('\m\s\<bar>/')<cr>
+inoreabb <silent> <buffer> \sub2 \subsubsection{}<Left>
+    \<c-r>=Eatchar('\m\s\<bar>/')<cr>
+inoreabb <silent> <buffer> \frac \frac{}{<++>}<++><Esc>10hi
+    \<c-r>=Eatchar('\m\s\<bar>/')<cr>
 inoremap <buffer> ` `'<++><Esc>4hi
 inoremap <buffer> `` ``''<++><Esc>5hi
 inoremap <buffer> $ $$<++><Esc>4hi

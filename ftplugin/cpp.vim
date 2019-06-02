@@ -2,8 +2,8 @@ if (&ft != 'cpp')
     finish
 endif
 
-inoreabb <buffer> #inc<lt> #include <lt>><left>
-inoreabb <buffer> #inc" #include ""<left>
+inoreabb <silent> <buffer> #inc<lt> #include <lt>><left><c-r>=Eatchar('\m\s/')<cr>
+inoreabb <silent> <buffer> #inc" #include ""<left><c-r>=Eatchar('\m\s/')<cr>
 nnoremap <buffer> #inc<lt> i#include <lt>><left>
 nnoremap <buffer> #inc" i#include ""<left>
 nnoremap <buffer> #def<Space> i#define
@@ -18,14 +18,14 @@ nnoremap <buffer> <C-S-F5> :cd %:p:h<CR>:!%<.exe<CR>
 
 " TODO: Multi-File Codes that require a Makefile
 
-inoreabb <buffer> class class <++> {<CR>
-                          \<++><CR>
-                          \} <++>;
+inoreabb <silent> <buffer> class class <++> {<CR>
+                                    \<++><CR>
+                                \} <++>;
+                                \<c-r>=Eatchar('\m\s/')<cr>
 
 nnoremap <buffer> <CR><CR><CR> i#include <lt>iostream><CR>
-                               \using namespace std;<CR>
                                \<CR>
                                \int main(void) {<CR>
-                               \<++>;<CR>
+                                   \<++>;<CR>
                                \return 0;<CR>
                                \}
