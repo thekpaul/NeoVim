@@ -95,11 +95,11 @@ endif
 " TODO: AutoClose in Selection
 
 " Erase Abbreviation Trigger Keys
-func Eatchar(pat)
-    let c = nr2char(getchar(0))
-    return (c =~ a:pat) ? '' : c
-endfunc
-inoreabb <silent> <buffer> if if ()<Left><C-R>=Eatchar('\s')<CR>
+" func Eatchar(pat)
+"     let c = nr2char(getchar(0))
+"     return (c =~ a:pat) ? '' : c
+" endfunc
+" inoreabb <silent> <buffer> if if ()<Left><C-R>=Eatchar('\s')<CR>
 
 " Automatic Soft Tab Usage
 autocmd FileReadPre * if(&modifiable == 1) | retab | w | endif
