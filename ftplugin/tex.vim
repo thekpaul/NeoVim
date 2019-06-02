@@ -6,15 +6,6 @@ endif
 " Suppress Vim-LaTeX
 let b:suppress_latex_suite = 1
 
-" Detect leader char of abbrev lhs and convert only if leader == '\'
-" function! s:Expr(default, repl)
-"   if getline('.')[col('.')-2]=='\'
-"     return "\<bs>".a:repl
-"   else
-"     return a:default
-"   endif
-" endfunction
-
 set iskeyword+=\
 
 " Prevent Worldwide Mappings
@@ -32,7 +23,7 @@ inoreabb <buffer> \subs \subsection{}<Left>
 inoreabb <buffer> \sub2 \subsubsection{}<Left>
 inoreabb <buffer> \frac \frac{}{<++>}<++><Esc>10hi
 inoremap <buffer> ` `'<++><Esc>4hi
-inoremap <buffer> `` ``''<++><Esc>4hi
+inoremap <buffer> `` ``''<++><Esc>5hi
 inoremap <buffer> $ $$<++><Esc>4hi
 inoremap <buffer> \[ \[  \]<++><Esc>6hi
 inoremap <buffer> [[ \left[\right]<++><Esc>10hi
