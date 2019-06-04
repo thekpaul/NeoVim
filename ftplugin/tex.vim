@@ -30,7 +30,7 @@ inoremap <buffer> [[ \left[\right]<++><Esc>10hi
 inoremap <buffer> {{ \left\{\right\}<++><Esc>11hi
 inoremap <buffer> (( \left(\right)<++><Esc>10hi
 inoremap <buffer> <C-b> \textbf{}<++><Esc>4hi
-inoremap <buffer> <C-i> \textit{}<++><Esc>4hi
+inoremap <buffer> <C-t> \textit{}<++><Esc>4hi
 
 " LaTeX-specific Greek Letter Mappings
 inoremap <buffer> @A \mathrm{A}
