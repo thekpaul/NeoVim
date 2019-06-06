@@ -1,7 +1,29 @@
+" Allow the usage of mouse in all environments
 set mouse=a
-set clipboard=unnamedplus
-" Behave MS Windows
-runtime mswin.vim
+
+" Partial Behaviour Changes
+behave mswin
+set virtualedit=all
+
+"yank to and paste from the clipboard without prepending "* to commands
+let &clipboard = has('unnamedplus') ? 'unnamedplus' : 'unnamed'
+
+" Windows like clipboard
+vnoremap <c-x> "+x
+vnoremap <c-c> "+y
+cnoremap <c-v> <c-r>+
+exe 'ino <script> <C-V>' paste#paste_cmd['i']
+
+" Un/Redo Like Windows
+nnoremap <C-z> u
+nnoremap <C-y> <C-r>
+inoremap <C-z> <Esc>ui
+inoremap <C-y> <Esc><C-r>i
+
+" delete, yank, select a document
+nnoremap dad ggVGd
+nnoremap yad %y
+nnoremap vad ggVG
 
 set noundofile | "No Undo Files
 
@@ -93,6 +115,16 @@ if (&ft != 'tex')
 endif
 
 " TODO: AutoClose in Selection
+vmap ( di(<Esc>p
+vmap [ di[<Esc>p
+vmap { di{<Esc>p
+vmap {<CR> di{<CR><Esc>p
+vmap {;<CR> di{;<CR><Esc>p
+if (&ft != 'ted')
+    vmap ' di'<Esc>p
+    vmap ` di`<Esc>p
+    vmap " di"<Esc>p
+endif
 
 " Erase Abbreviation Trigger Keys
 " func Eatchar(pat)
