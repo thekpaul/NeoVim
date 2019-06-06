@@ -3,10 +3,6 @@ set mouse=a
 
 " Partial Behaviour Changes
 behave mswin
-set virtualedit=all
-
-"yank to and paste from the clipboard without prepending "* to commands
-let &clipboard = has('unnamedplus') ? 'unnamedplus' : 'unnamed'
 
 " Windows like clipboard
 vnoremap <c-x> "+x
@@ -145,8 +141,8 @@ nnoremap <F12> :PlugInstall<CR>
     " Press F12 to Install new Plugins
 nnoremap <C-F12> :PlugClean<CR>
     " Press Ctrl+F12 to Delete Plugins
-nnoremap <F11> :PlugUpdate<CR>
-    " Press F11 to Update new Plugins
+nnoremap <S-F12> :PlugUpdate<CR>
+    " Press Shift+F12 to Update new Plugins
 
 " Additional Settings for the Seoul256 Plugin
 let g:seoul256_background = 235
@@ -154,6 +150,10 @@ colo seoul256
 highlight EndOfBuffer guifg=bg | "Hide Tildes in Empty Buffer Space
 
 " Additional Settings for the Startify Plugin
+nnoremap <F11> :Startify<CR>
+    " Press F11 to Startify current buffer
+nnoremap <C-F11> :tabe<CR>:Startify<CR>
+    " Press Ctrl+F11 to Startify new tab
 let g:startify_custom_header = [
 \ '                                __ __                                      ',
 \ '              __               /\ \\ \                                     ',
@@ -172,8 +172,10 @@ let g:startify_custom_header = [
 \ '    * Press Ctrl-F2 to Open System sysinit.vim in New Tab                  ',
 \ '    * Press F3 to Change Working Directory to that of Current File         ',
 \ '    * Press F10 to Save and Source a Vimscript File                        ',
-\ '    * Press F11 to Update Plugins via Vim-Plug                             ',
+\ '    * Press F11 to Startify the Current Buffer                             ',
+\ '    * Press Ctrl-F11 to Open and Startify a New Tab                        ',
 \ '    * Press F12 to Install new Plugins via Vim-Plug                        ',
+\ '    * Press Shift-F12 to Update Plugins via Vim-Plug                       ',
 \ '    * Press Ctrl-F12 to Delete Plugins via Vim-Plug                        ']
 
 " Additional Settings for the NERDTree Plugin
