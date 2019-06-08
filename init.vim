@@ -16,6 +16,9 @@ nnoremap <C-y> <C-r>
 inoremap <C-z> <Esc>ui
 inoremap <C-y> <Esc><C-r>i
 
+" Save Like Windows
+noremap <C-s> :update<CR>
+
 " delete, yank, select a document
 nnoremap dad ggVGd
 nnoremap yad %y
