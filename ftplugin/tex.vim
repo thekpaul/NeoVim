@@ -42,6 +42,8 @@ vmap <buffer> [[ di[[<Esc>p
 vmap <buffer> {{ di{{<Esc>p
 vmap <buffer> (( di((<Esc>p
 vmap <buffer> $$ di$<Esc>p
+vmap <buffer> <C-b> di<C-b><Esc>p
+vmap <buffer> <C-t> di<C-t><Esc>p
 
 " LaTeX-specific Greek Letter Mappings
 inoremap <buffer> @A \mathrm{A}
