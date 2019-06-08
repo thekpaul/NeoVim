@@ -110,7 +110,7 @@ if (&ft != 'tex')
     inoremap " ""<lt>++><Esc>5ha
 endif
 
-" TODO: AutoClose in Selection
+" AutoClose in Selection
 vmap ( di(<Esc>p
 vmap [ di[<Esc>p
 vmap { di{<Esc>p
