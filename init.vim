@@ -116,7 +116,7 @@ vmap [ di[<Esc>p
 vmap { di{<Esc>p
 vmap {<CR> di{<CR><Esc>p
 vmap {;<CR> di{;<CR><Esc>p
-if (&ft != 'ted')
+if (&ft != 'tex')
     vmap ' di'<Esc>p
     vmap ` di`<Esc>p
     vmap " di"<Esc>p
