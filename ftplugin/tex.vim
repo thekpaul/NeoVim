@@ -37,11 +37,11 @@ inoremap <buffer> (( \left(\right)<++><Esc>10hi
 " LaTeX-Specific Selection AutoClose
 vmap <buffer> ` di`<Esc>p
 vmap <buffer> `` di``<Esc>p
-vmap <buffer> $ di$<Esc>p
 vmap <buffer> \[ di\[<Esc>p
 vmap <buffer> [[ di[[<Esc>p
 vmap <buffer> {{ di{{<Esc>p
 vmap <buffer> (( di((<Esc>p
+smap <buffer> $ di$<Esc>p
 
 " LaTeX-specific Greek Letter Mappings
 inoremap <buffer> @A \mathrm{A}
