@@ -22,6 +22,10 @@ inoreabb <silent> <buffer> \sect \section{}<Left><C-R>
 inoreabb <silent> <buffer> \subs \subsection{}<Left><C-R>
 inoreabb <silent> <buffer> \sub2 \subsubsection{}<Left><C-R>
 inoreabb <silent> <buffer> \frac \frac{}{<++>}<++><Esc>10hi<C-R>
+inoremap <buffer> <C-b> \textbf{}<++><Esc>4hi
+inoremap <buffer> <C-t> \textit{}<++><Esc>4hi
+
+" LaTeX-Specific AutoClose
 inoremap <buffer> ` `'<++><Esc>4hi
 inoremap <buffer> `` ``''<++><Esc>5hi
 inoremap <buffer> $ $$<++><Esc>4hi
@@ -29,8 +33,15 @@ inoremap <buffer> \[ \[  \]<++><Esc>6hi
 inoremap <buffer> [[ \left[\right]<++><Esc>10hi
 inoremap <buffer> {{ \left\{\right\}<++><Esc>11hi
 inoremap <buffer> (( \left(\right)<++><Esc>10hi
-inoremap <buffer> <C-b> \textbf{}<++><Esc>4hi
-inoremap <buffer> <C-t> \textit{}<++><Esc>4hi
+
+" LaTeX-Specific Selection AutoClose
+vmap <buffer> ` di`<Esc>p
+vmap <buffer> `` di``<Esc>p
+vmap <buffer> $ di$<Esc>p
+vmap <buffer> \[ di\[<Esc>p
+vmap <buffer> [[ di[[<Esc>p
+vmap <buffer> {{ di{{<Esc>p
+vmap <buffer> (( di((<Esc>p
 
 " LaTeX-specific Greek Letter Mappings
 inoremap <buffer> @A \mathrm{A}
