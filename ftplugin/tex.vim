@@ -104,3 +104,5 @@ inoremap <buffer> @vf \varphi
 nnoremap <buffer> <F5> :cd %:p:h<CR>:w<CR>:!pdflatex %<CR>
 nnoremap <buffer> <C-F5> :cd %:p:h<CR>:w<CR>:!pdflatex %<CR><CR>:!pdflatex %<CR>
 nnoremap <buffer> <S-F5> :cd %:p:h<CR>:w<CR>:!pdflatex -shell-escape %<CR>
+nnoremap <buffer> <C-S-F5> :cd %:p:h<CR>:w<CR>:!pdflatex -shell-escape %<CR><CR>
+    :!pdflatex -shell-escape %<CR>
