@@ -17,7 +17,8 @@ inoremap <C-z> <Esc>ui
 inoremap <C-y> <Esc><C-r>i
 
 " Save Like Windows
-noremap <C-s> :update<CR>
+inoremap <C-s> :update<CR>
+nnoremap <C-s> :update<CR>
 
 " delete, yank, select a document
 nnoremap dad ggVGd
@@ -99,7 +100,7 @@ nnoremap <F4> :call delete(expand('%'))<CR>
     "Press F4 to delete Current File
 nnoremap <C-F4> :call delete(expand('%'))<CR>:bdelete!<CR>
     "Press Ctrl+F4 to delete Current File and quit buffer
-nnoremap <F10> :w<CR>:source %<CR>| "Press F10 to Save and Reload Current File
+nnoremap <F10> :up<CR>:source %<CR>| "Press F10 to Save and Reload Current File
 
 " AutoClose
 inoremap ( ()<lt>++><Esc>5ha
