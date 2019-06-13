@@ -18,10 +18,6 @@ nnoremap <buffer> <C-S-F5> :cd %:p:h<CR>:!%<.exe<CR>
 
 " TODO: Multi-File Codes that require a Makefile
 
-inoreabb <silent> <buffer> class class <++> {<CR>
-                                    \<++><CR>
-                                \} <++>;<C-R>
-
 nnoremap <buffer> <CR><CR><CR> i#include <lt>iostream><CR>
                                \<CR>
                                \int main(void) {<CR>
