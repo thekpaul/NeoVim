@@ -30,6 +30,8 @@ set noundofile | "No Undo Files
 " Vim-Plug as Plugin Manager
 call plug#begin('$XDG_CONFIG_HOME/nvim/plugged')
     Plug 'mhinz/vim-startify' | " Installed Vim-Startify
+    Plug 'dart-lang/dart-vim-plugin' | " Installed Dart-Vim Plugin
+    Plug 'thosakwe/vim-flutter' | " Installed Vim-Flutter
     Plug 'scrooloose/nerdtree' | " Installed NERDTree
     Plug 'vim-airline/vim-airline' | " Installed Vim-Airline
     Plug 'junegunn/seoul256.vim' | " Installed Seoul256 Theme
@@ -168,7 +170,7 @@ let g:startify_custom_header = [
 \ '      \/__/     \/_/\/_/\/_/\/_/   \/_//_/                                 ',
 \ '                                                                           ',
 \ '                                                                           ',
-\ '    * Always remember to DEL /s /q .exe for quiet, recursive .exe cleaning ',
+\ '    * Remember to DEL /s /q **.exe for quiet, recursive .exe cleaning      ',
 \ '                                                                           ',
 \ '    * Press F1 to Open User init.vim                                       ',
 \ '    * Press Ctrl-F1 to Open System sysinit.vim                             ',
