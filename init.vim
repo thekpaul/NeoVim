@@ -45,6 +45,8 @@ call plug#begin('$XDG_CONFIG_HOME/nvim/plugged')
         "Installed vim-better-whitespace, a visual whitespace manager
     Plug 'godlygeek/tabular' | "Installed tabular plugin
     Plug 'plasticboy/vim-markdown' | "Installed vim-markdown
+    Plug 'tpope/vim-surround' | "Installed vin-surround
+    Plug 'wakatime/vim-wakatime' | "Installed WakaTime, a Coding Timekeeper
   " Plug '~/local-config-reader'
         " Installed Local-Config-Reader, a secure local configuration reader
 call plug#end()
