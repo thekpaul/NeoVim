@@ -29,6 +29,7 @@ inoremap <buffer> <C-t> \textit{}<++><Esc>4hi
 inoremap <buffer> ` `'<++><Esc>4hi
 inoremap <buffer> `` ``''<++><Esc>5hi
 inoremap <buffer> $ $$<++><Esc>4hi
+inoremap <buffer> \( \(  \)<++><Esc>6hi
 inoremap <buffer> \[ \[  \]<++><Esc>6hi
 inoremap <buffer> [[ \left[\right]<++><Esc>10hi
 inoremap <buffer> {{ \left\{\right\}<++><Esc>11hi
@@ -37,6 +38,7 @@ inoremap <buffer> (( \left(\right)<++><Esc>10hi
 " LaTeX-Specific Selection AutoClose
 vmap <buffer> ` di`<Esc>p
 vmap <buffer> `` di``<Esc>p
+vmap <buffer> \( di\(<Esc>p
 vmap <buffer> \[ di\[<Esc>p
 vmap <buffer> [[ di[[<Esc>p
 vmap <buffer> {{ di{{<Esc>p
