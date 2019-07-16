@@ -11,10 +11,10 @@ inoremap <buffer> /* /**/<left><left>
 inoreabb <buffer> cout cout <lt><lt>
 
 " For Single-File Codes : Save, Compile, and Run
-nnoremap <buffer> <F5> :cd %:p:h<CR>:w<CR>:!g++ % -o %<.exe<CR><CR>:!%<.exe<CR>
-nnoremap <buffer> <C-F5> :cd %:p:h<CR>:w<CR>:!g++ % -o %<.exe<CR><CR>:tabe<CR>:terminal<CR>a
-nnoremap <buffer> <S-F5> :cd %:p:h<CR>:w<CR>:!g++ % -o %<.exe<CR>
-nnoremap <buffer> <C-S-F5> :cd %:p:h<CR>:!%<.exe<CR>
+nnoremap <buffer> <F5> :cd %:p:h<CR>:w<CR>:!g++ % -o %<.out<CR><CR>:!%<.out<CR>
+nnoremap <buffer> <C-F5> :cd %:p:h<CR>:w<CR>:!g++ % -o %<.out<CR><CR>:tabe<CR>:terminal<CR>a
+nnoremap <buffer> <S-F5> :cd %:p:h<CR>:w<CR>:!g++ % -o %<.out<CR>
+nnoremap <buffer> <C-S-F5> :cd %:p:h<CR>:!%<.out<CR>
 
 " TODO: Multi-File Codes that require a Makefile
 
