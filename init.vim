@@ -155,7 +155,8 @@ nnoremap <S-F12> :PlugUpdate<CR>
 " Additional Settings for the Seoul256 Plugin
 let g:seoul256_background = 235
 colo seoul256
-highlight EndOfBuffer guifg=bg | "Hide Tildes in Empty Buffer Space
+highlight EndOfBuffer guifg=bg | "Hide Tildes in Empty Buffer Space for GUI
+highlight EndOfBuffer ctermfg=bg | "Hide Tildes for Terminal
 
 " Additional Settings for the Startify Plugin
 nnoremap <F11> :Startify<CR>
