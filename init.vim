@@ -204,7 +204,10 @@ let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_guide_size = 1
 let g:indent_guides_exclude_filetypes = ['help', 'nerdtree', 'startify']
 
-"Additional Settings for the vim-better-whitespace Plugin
+" Additional Settings for the vim-better-whitespace Plugin
 let g:better_whitespace_ctermcolor = '#FFFFFF'
 let g:strip_whitespace_on_save = 1
 let g:better_whitespace_filetypes_blacklist = ['help', 'nerdtree', 'startify']
+
+" Additional Settings for the vim-wakatime Plugin
+let g:wakatime_PythonBinary = 'C:\Python37\python.exe'
