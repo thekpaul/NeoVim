@@ -27,6 +27,11 @@ nnoremap vad ggVG
 
 set noundofile | "No Undo Files
 
+" Set Paths to Various Interpreters for Faster Startup
+let g:python_host_prog = 'C:\Python27\python.exe'
+let g:python3_host_prog = 'C:\Python37\python.exe'
+let g:ruby_host_prog = 'C:\tools\ruby26\bin\ruby.exe'
+
 " Vim-Plug as Plugin Manager
 call plug#begin('$XDG_CONFIG_HOME/nvim/plugged')
     Plug 'mhinz/vim-startify' | " Installed Vim-Startify
