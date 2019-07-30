@@ -82,7 +82,7 @@ augroup CursorColumn
     au WinLeave * setlocal nocursorcolumn
 augroup END
 set breakindent | set linebreak
-:set iskeyword+=\
+set iskeyword+=\
 let g:tex_flavor = "latex"
 set colorcolumn=80
 
