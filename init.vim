@@ -52,6 +52,7 @@ call plug#begin('$XDG_CONFIG_HOME/nvim/plugged')
     Plug 'plasticboy/vim-markdown' | "Installed vim-markdown
     Plug 'tpope/vim-surround' | "Installed vin-surround
     Plug 'wakatime/vim-wakatime' | "Installed WakaTime, a Coding Timekeeper
+    Plug 'udalov/kotlin-vim' | "Installed Kotlin-Vim, a Kotlin Support Plugin
   " Plug '~/local-config-reader'
         " Installed Local-Config-Reader, a secure local configuration reader
 call plug#end()
