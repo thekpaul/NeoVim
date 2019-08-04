@@ -86,6 +86,7 @@ set breakindent | set linebreak
 set iskeyword+=\
 let g:tex_flavor = "latex"
 set colorcolumn=80
+set splitbelow | set splitright | "Split below and right of current buffer
 
 " Set Mappings for Vimscript and Vanilla Vim Management
 nnoremap <F1> :cd $XDG_CONFIG_HOME/nvim<CR>:e init.vim<CR>
