@@ -3,6 +3,7 @@ set mouse=a
 
 " Partial Behaviour Changes
 behave mswin
+set virtualedit=onemore "For Consistency in Selective AutoClosing
 
 " Windows like clipboard
 vnoremap <c-x> "+x
@@ -87,6 +88,7 @@ set iskeyword+=\
 let g:tex_flavor = "latex"
 set colorcolumn=80
 set splitbelow | set splitright | "Split below and right of current buffer
+set foldmethod=manual | "Fold Manually
 
 " Set Mappings for Vimscript and Vanilla Vim Management
 nnoremap <F1> :cd $XDG_CONFIG_HOME/nvim<CR>:e init.vim<CR>
