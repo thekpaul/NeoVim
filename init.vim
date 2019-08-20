@@ -201,6 +201,8 @@ let g:startify_custom_header = [
 \ '    * Press F12 to Install new Plugins via Vim-Plug                        ',
 \ '    * Press Shift-F12 to Update Plugins via Vim-Plug                       ',
 \ '    * Press Ctrl-F12 to Delete Plugins via Vim-Plug                        ']
+set sessionoptions=blank,curdir,folds,help,tabpages,winpos
+    " Startify respects Preset Values of the Preceding Options
 
 " Additional Settings for the NERDTree Plugin
 let g:NERDTreeMinimalUI = 1
