@@ -1,5 +1,5 @@
-" Only Execute when File Type is HTML
-if (&ft != 'html')
+" Only Execute when File Type is YAML
+if (&ft != 'yaml')
     finish
 endif
 

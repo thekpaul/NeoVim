@@ -1,5 +1,5 @@
 " Only Execute when File Type is HTML
-if (&ft != 'html')
+if (&ft != 'javascript')
     finish
 endif
 
