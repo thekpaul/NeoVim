@@ -223,3 +223,6 @@ let g:better_whitespace_filetypes_blacklist = ['help', 'nerdtree', 'startify']
 
 " Additional Settings for the vim-wakatime Plugin
 let g:wakatime_PythonBinary = 'C:\Python37\python.exe'
+
+" Additional Settings for the vim-markdown Plugin
+let g:vim_markdown_folding_disabled = 1
