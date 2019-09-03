@@ -8,6 +8,7 @@
 .TemporaryItems
 .VolumeIcon.icons
 .DocumentRevisions-V100
+.netrwhist
 
 # Files that are NOT MINE
 autoload/*
