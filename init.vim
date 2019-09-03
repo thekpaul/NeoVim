@@ -185,7 +185,7 @@ let g:startify_custom_header = [
 \ '                     ___                         ___                       ',
 \ '                        \      / \  \   /\      /                          ',
 \ '                         \    ㅣ       / ㅣ    /                           ',
-\ '                          \___ \      /  / ___/                            ',
+\ '                          \___ \    __/  / ___/                            ',
 \ '                                                                           ',
 \ '                                                                           ',
 \ '    * Remember to DEL /s /q **.exe for quiet, recursive .exe cleaning      ',
