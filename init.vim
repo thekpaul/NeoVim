@@ -76,8 +76,8 @@ set fileencodings=utf8 | "Set NEW File Encoding to UTF-8
     endif | "Set ALL File Encoding to UTF-8
 set number | "Line Numbering
 set linespace=3 | "Set Line Spacing to 3 units
-set expandtab | set shiftwidth=4 | set tabstop=4
-set softtabstop=4 | set smarttab | "Set Tab Spacing
+setlocal expandtab | setlocal shiftwidth=4 | setlocal tabstop=4
+setlocal softtabstop=4 | setlocal smarttab | "Set Tab Spacing
 set cursorline
 augroup CursorColumn
     au!

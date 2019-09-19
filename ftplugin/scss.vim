@@ -4,5 +4,5 @@ if (&ft != 'scss')
 endif
 
 inoremap <buffer> <lt> <lt>><left>
-set shiftwidth=2 | set tabstop=2
-set softtabstop=2 | set smarttab | "Set Tab Spacing to 2
+setlocal shiftwidth=2 | setlocal tabstop=2
+setlocal softtabstop=2 | setlocal smarttab | "Set Tab Spacing to 2
