@@ -2,3 +2,5 @@
 if (&ft != 'matlab')
     finish
 endif
+
+nnoremap <buffer> <F5> :cd %:p:h<CR>:up<CR>:!mcc %<CR>
