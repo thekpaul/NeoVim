@@ -116,7 +116,7 @@ inoremap <buffer> @vr \varrho
 inoremap <buffer> @vf \varphi
 
 " Invoking PDFLaTeX
-nnoremap <buffer> <F5> :tcd %:p:h<CR>:w<CR>:!pdflatex %<CR>
-nnoremap <buffer> <S-F5> :tcd %:p:h<CR>:w<CR>:!pdflatex -shell-escape %<CR>
+nnoremap <buffer> <F5> :tcd %:p:h<CR>:up<CR>:!pdflatex %<CR>
+nnoremap <buffer> <S-F5> :tcd %:p:h<CR>:up<CR>:!pdflatex -shell-escape %<CR>
 nmap <buffer> <C-F5> <F5><CR>:!pdflatex %<CR>
 nmap <buffer> <C-S-F5> <S-F5><CR>:!pdflatex -shell-escape %<CR>
