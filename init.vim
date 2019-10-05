@@ -112,6 +112,8 @@ nnoremap <S-F3> :cd ..<CR>
     "Press Shift+F3 to Change Working Directory to One Level Up
 nnoremap <F4> :call delete(expand('%'))<CR>
     "Press F4 to delete Current File
+nnoremap <F4> :call delete(expand('%<.log'))<CR>
+    "Press Shift+F4 to delete Current File
 nnoremap <C-F4> :call delete(expand('%'))<CR>:bdelete!<CR>
     "Press Ctrl+F4 to delete Current File and quit buffer
 nnoremap <F10> :up<CR>:source %<CR>| "Press F10 to Save and Reload Current File
