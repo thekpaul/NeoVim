@@ -64,7 +64,8 @@ filetype plugin indent on | "Set plugin loading according to filetype
 
 " Personal Settings
 if has('win32')
-    set shell=powershell shellquote=( shellpipe=\| shellxquote=
+    set shell=powershell
+    set shellquote= shellpipe=\| shellxquote=
     set shellcmdflag=-NoLogo\ -NoProfile\ -ExecutionPolicy\ RemoteSigned\ -Command
     set shellredir=\|\ Out-File\ -Encoding\ UTF8
 endif | "Set Default Shell Application to PowerShell
