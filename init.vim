@@ -39,6 +39,7 @@ call plug#begin('$XDG_CONFIG_HOME/nvim/plugged')
     Plug 'dart-lang/dart-vim-plugin' | " Installed Dart-Vim Plugin
     Plug 'thosakwe/vim-flutter' | " Installed Vim-Flutter
     Plug 'scrooloose/nerdtree' | " Installed NERDTree
+    Plug 'tpope/vim-fugitive' | "Installed vim-fugitive, a Git wrapper
     Plug 'vim-airline/vim-airline' | " Installed Vim-Airline
     Plug 'junegunn/seoul256.vim' | " Installed Seoul256 Theme
     Plug 'vim-latex/vim-latex' | " Installed Vim-Latex, a LaTeX Plugin
@@ -227,14 +228,3 @@ let g:wakatime_PythonBinary = 'C:\Python37\python.exe'
 
 " Additional Settings for the vim-markdown Plugin
 let g:vim_markdown_folding_disabled = 1
-
-" Git Wrapper Settings
-cnorea Gcommit !git commit
-cnorea Gadd !git add
-cnorea Gstatus !git status
-cnorea Gpush !git push
-cnorea Gcheckout !git checkout
-cnorea Gbranch !git branch
-cnorea Gpull !git pull
-cnorea Gmerge !git merge
-cnorea Grebase !git rebase
