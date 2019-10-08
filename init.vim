@@ -42,7 +42,6 @@ call plug#begin('$XDG_CONFIG_HOME/nvim/plugged')
     Plug 'vim-airline/vim-airline' | " Installed Vim-Airline
     Plug 'junegunn/seoul256.vim' | " Installed Seoul256 Theme
     Plug 'vim-latex/vim-latex' | " Installed Vim-Latex, a LaTeX Plugin
-    Plug 'tpope/vim-fugitive' | " Installed fugitive.vim, a Git wrapper
     Plug 'nathanaelkane/vim-indent-guides'
         " Installed vim-indent-guides, a visual indentation guide
     Plug 'sakhnik/nvim-gdb', {'do':':!./install.sh \| UpdateRemotePlugins'}
@@ -148,13 +147,6 @@ if (&ft != 'tex')
     vmap " di"<Esc>p
 endif
 
-" Erase Abbreviation Trigger Keys
-" func Eatchar(pat)
-"     let c = nr2char(getchar(0))
-"     return (c =~ a:pat) ? '' : c
-" endfunc
-" inoreabb <silent> <buffer> if if ()<Left><C-R>=Eatchar('\s')<CR>
-
 " Automatic Soft Tab Usage
 autocmd FileReadPre * if(&modifiable == 1) | retab | w | endif
 
@@ -235,3 +227,14 @@ let g:wakatime_PythonBinary = 'C:\Python37\python.exe'
 
 " Additional Settings for the vim-markdown Plugin
 let g:vim_markdown_folding_disabled = 1
+
+" Git Wrapper Settings
+cnorea Gcommit !git commit
+cnorea Gadd !git add
+cnorea Gstatus !git status
+cnorea Gpush !git push
+cnorea Gcheckout !git checkout
+cnorea Gbranch !git branch
+cnorea Gpull !git pull
+cnorea Gmerge !git merge
+cnorea Grebase !git rebase
