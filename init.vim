@@ -63,6 +63,12 @@ filetype off
 filetype plugin indent on | "Set plugin loading according to filetype
 
 " Personal Settings
+if has('win32')
+    set shell=powershell.exe
+    set shellcmdflag=-NoProfile\ -NoLogo\ -NonInteractive\ -Command
+    set shellpipe=|
+    set shellredir=>
+endif | "Set Default Shell Application to PowerShell
 set guifont=D2Coding:h10
 set encoding=utf8 | "Set File Encoding as UTF-8
 language en
