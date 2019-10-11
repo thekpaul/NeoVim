@@ -66,7 +66,7 @@ filetype plugin indent on | "Set plugin loading according to filetype
 if has('win32')
     set shell=powershell
     set shellquote= shellpipe=\| shellxquote=
-    set shellcmdflag=-NoLogo\ -NoProfile\ -ExecutionPolicy\ RemoteSigned\ -Command
+    set shellcmdflag=\ -NoLogo\ -ExecutionPolicy\ RemoteSigned\ -Command
     set shellredir=\|\ Out-File\ -Encoding\ UTF8
 endif | "Set Default Shell Application to PowerShell
 set guifont=D2Coding:h10
@@ -118,7 +118,7 @@ nnoremap <S-F3> :cd ..<CR>
     "Press Shift+F3 to Change Working Directory to One Level Up
 nnoremap <F4> :call delete(expand('%'))<CR>
     "Press F4 to delete Current File
-nnoremap <F4> :call delete(expand('%<.log'))<CR>
+nnoremap <S-F4> :call delete(expand('%<.log'))<CR>
     "Press Shift+F4 to delete Current File
 nnoremap <C-F4> :call delete(expand('%'))<CR>:bdelete!<CR>
     "Press Ctrl+F4 to delete Current File and quit buffer
