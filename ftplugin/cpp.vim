@@ -30,3 +30,8 @@ nnoremap <buffer> <CR><CR><CR> i#include <lt>iostream><CR>
                                    \<++>;<CR>
                                \return 0;<CR>
                                \}
+
+" I **HATE** _H! Change Them ALL to _HPP!
+if (expand('%:e') == 'h')
+    nnoremap <buffer> <F6> :sav %<.hpp<CR>:call delete(expand('%:t:r') . '.h')<CR>
+endif
