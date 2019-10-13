@@ -12,18 +12,38 @@ inoreabb <buffer> cout cout <lt><lt>
 
 " For Single-File Codes : Save, Compile, and Run
 " Step 1: Read the File and see if any Custom Headers need be Included (TODO)
-
+function! Listall() abort
+    0
+    let filelist = [expand('%')]
+    while 1 > 0
+        if strpart(getline('.'), 0, 10) == '#include "'
+            let templist = split(getline('.'), '"')
+            if templist[1] != expand('%:t:r' . '.hpp')
+                let filelist = add(filelist, templist[1] . '.cpp')
+        else
+            if stridx(getline('.'), 'End of Include') != -1
+                break
+            else
+                continue
+            endif
+        endif
+        +
+    endwhile
+endfunction
 " Step 2: Compile according to CLI
 if (&shell == 'powershell')
-    nnoremap <buffer> <F5> :cd %:p:h<CR>:w<CR>:!g++ % -o %<.exe<CR><CR>
+    nnoremap <buffer> <F5> :cd %:p:h<CR>:w<CR>:call Listall()<CR>
+                         \ :!g++ expand(filelist) -o %<.exe<CR><CR>
                          \ :tabe %<CR>:terminal %<.exe<CR>
     nnoremap <buffer> <C-F5> :cd %:p:h<CR>:tabe %<CR>:terminal %<.exe<CR>
 else "Shell is NOT PowerShell
-    nnoremap <buffer> <F5> :cd %:p:h<CR>:w<CR>:!g++ % -o %<.out<CR><CR>
+    nnoremap <buffer> <F5> :cd %:p:h<CR>:w<CR>::call Listall()<CR>
+                         \ :!g++ expand(filelist) -o %<.out<CR><CR>
                          \ :tabe %<CR>:terminal %<.out<CR>
     nnoremap <buffer> <C-F5> :cd %:p:h<CR>:tabe %<CR>:terminal %<.out<CR>
 endif
-nnoremap <buffer> <S-F5> :cd %:p:h<CR>:w<CR>:!g++ % -o %<.out<CR>
+nnoremap <buffer> <S-F5> :cd %:p:h<CR>:w<CR>::call Listall()<CR>
+                       \ :!g++ expand(filelist) -o %<.out<CR>
 
 " TODO: Multi-File Codes that require a Makefile
 
