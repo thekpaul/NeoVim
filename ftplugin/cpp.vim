@@ -11,7 +11,7 @@ inoremap <buffer> /* /**/<left><left>
 inoreabb <buffer> cout cout <lt><lt>
 
 " For Single-File Codes : Save, Compile, and Run
-if &shell = powershell
+if (&shell == 'powershell')
     nnoremap <buffer> <F5> :cd %:p:h<CR>:w<CR>:!g++ % -o %<.exe<CR><CR>
                          \ :tabe %<CR>:terminal %<.exe<CR>
     nnoremap <buffer> <C-F5> :cd %:p:h<CR>:tabe %<CR>:terminal %<.exe<CR>
