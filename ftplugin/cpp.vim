@@ -13,8 +13,8 @@ inoreabb <buffer> cout cout <lt><lt>
 " For Single-File Codes : Save, Compile, and Run
 if (&shell == 'powershell')
     nnoremap <buffer> <F5> :cd %:p:h<CR>:w<CR>:!g++ % -o %<.exe<CR><CR>
-                         \ :tabe %<CR>:terminal %<.exe<CR>
-    nnoremap <buffer> <C-F5> :cd %:p:h<CR>:tabe %<CR>:terminal %<.exe<CR>
+                         \ :tabe %<CR>:terminal ./%<.exe<CR>
+    nnoremap <buffer> <C-F5> :cd %:p:h<CR>:tabe %<CR>:terminal ./%<.exe<CR>
 else "Shell is NOT PowerShell
     nnoremap <buffer> <F5> :cd %:p:h<CR>:w<CR>:!g++ % -o %<.out<CR><CR>
                          \ :tabe %<CR>:terminal %<.out<CR>
