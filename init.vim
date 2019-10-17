@@ -63,7 +63,7 @@ filetype off
 filetype plugin indent on | "Set plugin loading according to filetype
 
 " Personal Settings
-if has('win32')
+if (&shellcmdflag =~# '^/\|-Command')
     set shell=powershell
     set shellquote= shellpipe=\| shellxquote=
     set shellcmdflag=\ -NoLogo\ -ExecutionPolicy\ RemoteSigned\ -Command
