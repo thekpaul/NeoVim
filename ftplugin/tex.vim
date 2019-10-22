@@ -118,4 +118,4 @@ inoremap <buffer> @vf \varphi
 " Invoking PDFLaTeX
 nnoremap <buffer> <F5> :tcd %:p:h<CR>:up<CR>:!pdflatex %<CR>
 nnoremap <buffer> <S-F5> :tcd %:p:h<CR>:up<CR>:!pdflatex -shell-escape %<CR>
-nnoremap <buffer> <C-F5> :!sumatra %<.pdf
+nnoremap <buffer> <C-F5> :!sumatra %<.pdf<CR>
