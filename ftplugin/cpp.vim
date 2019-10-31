@@ -35,3 +35,6 @@ nnoremap <buffer> <CR><CR><CR> i#include <lt>iostream><CR>
 if (expand('%:e') == 'h')
     nnoremap <buffer> <F6> :sav %<.hpp<CR>:call delete(expand('%:t:r') . '.h')<CR>
 endif
+if (expand('%:e') == 'hpp')
+    nnoremap <buffer> <C-F6> :sav %<.h<CR>:call delete(expand('%:t:r') . '.hpp')<CR>
+endif
