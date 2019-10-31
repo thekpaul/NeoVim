@@ -122,9 +122,10 @@ nnoremap <S-F4> :call delete(expand('%<.log'))<CR>
     "Press Shift+F4 to delete Current File
 nnoremap <C-F4> :call delete(expand('%'))<CR>:bdelete!<CR>
     "Press Ctrl+F4 to delete Current File and quit buffer
-nnoremap <F10> :up<CR>:source %<CR>| "Press F10 to Save and Reload Current File
-nnoremap <C-F10> :up<CR>:source $XDG_CONFIG_HOME/nvim/init.vim<CR>|
-    "Press Ctrl+F10 to Save and Reload User NVIMRC
+nnoremap <F10> :up<CR>:source $XDG_CONFIG_HOME/nvim/init.vim<CR>
+    "Press F10 to Save and Reload User NVIMRC
+nnoremap <C-F10> :up<CR>:execute "source $XDG_CONFIG_HOME/nvim/ftplugin/".&ft.".vim"<CR>
+    "Press Ctrl+F10 to Save and Reload User FT_NVIMRC
 
 " AutoClose
 inoremap ( ()<lt>++><Esc>5ha
