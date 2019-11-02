@@ -122,6 +122,11 @@ nnoremap <S-F4> :call delete(expand('%<.log'))<CR>
     "Press Shift+F4 to delete Current File
 nnoremap <C-F4> :call delete(expand('%'))<CR>:bdelete!<CR>
     "Press Ctrl+F4 to delete Current File and quit buffer
+"F5 is universally reserved for Compiling and Executing Various Code
+"F6 is universally reserved for Auxiliary Tasks related to Compilation
+"F7 is not (yet) assigned for a mapping.
+"F8 is not (yet) assigned for a mapping.
+"F9 is not (yet) assigned for a mapping.
 nnoremap <F10> :up<CR>:source $XDG_CONFIG_HOME/nvim/init.vim<CR>
     "Press F10 to Save and Reload User NVIMRC
 nnoremap <C-F10> :up<CR>:execute "source $XDG_CONFIG_HOME/nvim/ftplugin/".&ft.".vim"<CR>
