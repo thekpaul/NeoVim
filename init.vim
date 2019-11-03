@@ -126,10 +126,10 @@ nnoremap <C-F4> :call delete(expand('%'))<CR>:bdelete!<CR>
 "F6 is universally reserved for Auxiliary Tasks related to Compilation
 "F7 is not (yet) assigned for a mapping.
 "F8 is not (yet) assigned for a mapping.
-nnoremap <F9> :terminal<CR>a
-    "Press F9 to change CURRENT buffer to TERMINAL
-nnoremap <C-F9> :tabe<CR>:terminal<CR>a
+nnoremap <F9> :tabe<CR>:terminal<CR>a
     "Press F9 to OPEN NEW TAB to TERMINAL
+nnoremap <C-F9> :terminal<CR>a
+    "Press Ctrl+F9 to change CURRENT buffer to TERMINAL
 nnoremap <F10> :up<CR>:source $XDG_CONFIG_HOME/nvim/init.vim<CR>
     "Press F10 to Save and Reload User NVIMRC
 nnoremap <C-F10> :up<CR>:execute "source $XDG_CONFIG_HOME/nvim/ftplugin/".&ft.".vim"<CR>
