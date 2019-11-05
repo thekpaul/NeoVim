@@ -29,7 +29,7 @@ inoremap <buffer> <C-t> \textit{}<++><Esc>4hi
 inoremap <buffer> ` `'<++><Esc>4hi
 inoremap <buffer> `` ``''<++><Esc>5hi
 inoremap <buffer> $ $$<++><Esc>4hi
-inoremap <buffer> \( \(\)<++><Esc>4hi
+inoremap <buffer> \( \(\)<++><Esc>5hi
 inoremap <buffer> \[ \[  \]<++><Esc>6hi
 inoremap <buffer> [[ \left[\right]<++><Esc>10hi
 inoremap <buffer> {{ \left\{\right\}<++><Esc>11hi
