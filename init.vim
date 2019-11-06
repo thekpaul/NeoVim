@@ -42,7 +42,6 @@ call plug#begin('$XDG_CONFIG_HOME/nvim/plugged')
     Plug 'tpope/vim-fugitive' | "Installed vim-fugitive, a Git wrapper
     Plug 'vim-airline/vim-airline' | " Installed Vim-Airline
     Plug 'junegunn/seoul256.vim' | " Installed Seoul256 Theme
-    Plug 'vim-latex/vim-latex' | " Installed Vim-Latex, a LaTeX Plugin
     Plug 'nathanaelkane/vim-indent-guides'
         " Installed vim-indent-guides, a visual indentation guide
     Plug 'sakhnik/nvim-gdb', {'do':':!./install.sh \| UpdateRemotePlugins'}
@@ -96,6 +95,8 @@ let g:tex_flavor = "latex"
 set colorcolumn=80
 set splitbelow | set splitright | "Split below and right of current buffer
 set foldmethod=manual | "Fold Manually
+nnoremap <silent> <C-j> /<++><CR>:let @/ = ""<CR>4xi
+inoremap <silent> <C-j> <Esc>/<++><CR>:let @/ = ""<CR>4xi
 
 " Set Mappings for Vimscript and Vanilla Vim Management
 nnoremap <F1> :cd $XDG_CONFIG_HOME/nvim<CR>:e init.vim<CR>
