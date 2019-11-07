@@ -95,8 +95,8 @@ let g:tex_flavor = "latex"
 set colorcolumn=80
 set splitbelow | set splitright | "Split below and right of current buffer
 set foldmethod=manual | "Fold Manually
-nnoremap <silent> <C-j> /<++><CR>:let @/ = ""<CR>4xi
-inoremap <silent> <C-j> <Esc>/<++><CR>:let @/ = ""<CR>4xi
+nnoremap <silent> <C-j> /<++><CR>:let @/ = ""<CR>4"_xi
+inoremap <silent> <C-j> <Esc>/<++><CR>:let @/ = ""<CR>4"_xi
 
 " Set Mappings for Vimscript and Vanilla Vim Management
 nnoremap <F1> :cd $XDG_CONFIG_HOME/nvim<CR>:e init.vim<CR>
