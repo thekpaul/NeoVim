@@ -133,8 +133,10 @@ nnoremap <C-F9> :terminal<CR>a
     "Press Ctrl+F9 to change CURRENT buffer to TERMINAL
 nnoremap <F10> :up<CR>:source $XDG_CONFIG_HOME/nvim/init.vim<CR>
     "Press F10 to Save and Reload User NVIMRC
-nnoremap <C-F10> :up<CR>:execute "source $XDG_CONFIG_HOME/nvim/ftplugin/".&ft.".vim"<CR>
+nnoremap <C-F10> :up<CR>:execute "so $XDG_CONFIG_HOME/nvim/ftplugin/".&ft.".vim"<CR>
     "Press Ctrl+F10 to Save and Reload User FT_NVIMRC
+nnoremap <S-F10> :up<CR>:tabe "so $XDG_CONFIG_HOME/nvim/ftplugin/".&ft.".vim"<CR>
+    "Press Shift+F10 to Save and Open User FT_NVIMRC in New Tab
 
 " AutoClose
 inoremap ( ()<lt>++><Esc>5ha
