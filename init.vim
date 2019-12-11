@@ -222,7 +222,7 @@ set sessionoptions=blank,curdir,folds,help,tabpages,winpos
 
 " Additional Settings for the NERDTree Plugin
 let g:NERDTreeMinimalUI = 1
-let g:NERDTreeWinSize = 30
+let g:NERDTreeWinSize = 25
 autocmd VimEnter * NERDTree $HOME | wincmd l
 autocmd BufEnter * if (!exists("t:NERDTreeBufName") ) | silent NERDTreeMirror | wincmd l | endif
 autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
