@@ -36,26 +36,26 @@ let g:ruby_host_prog = 'C:\tools\ruby26\bin\ruby.exe'
 " Vim-Plug as Plugin Manager
 call plug#begin('$XDG_CONFIG_HOME/nvim/plugged')
     Plug 'mhinz/vim-startify' | " Installed Vim-Startify
-  " Plug 'dart-lang/dart-vim-plugin' | " Installed Dart-Vim Plugin
-  " Plug 'thosakwe/vim-flutter' | " Installed Vim-Flutter
     Plug 'scrooloose/nerdtree' | " Installed NERDTree
     Plug 'tpope/vim-fugitive' | "Installed vim-fugitive, a Git wrapper
     Plug 'vim-airline/vim-airline' | " Installed Vim-Airline
     Plug 'junegunn/seoul256.vim' | " Installed Seoul256 Theme
     Plug 'nathanaelkane/vim-indent-guides'
         " Installed vim-indent-guides, a visual indentation guide
-  " Plug 'sakhnik/nvim-gdb', {'do':':!./install.sh \| UpdateRemotePlugins'}
-        "Installed nvim-gdb, a GDB Wrapper for Neovim
-    Plug 'ntpeters/vim-better-whitespace'
-        "Installed vim-better-whitespace, a visual whitespace manager
-  " Plug 'godlygeek/tabular' | "Installed tabular plugin
     Plug 'plasticboy/vim-markdown' | "Installed vim-markdown
-    Plug 'tpope/vim-surround' | "Installed vin-surround
+    Plug 'tpope/vim-surround' | "Installed vim-surround
     Plug 'wakatime/vim-wakatime' | "Installed WakaTime, a Coding Timekeeper
-  " Plug 'udalov/kotlin-vim' | "Installed Kotlin-Vim, a Kotlin Support Plugin
-  " Plug 'PProvost/vim-ps1' | "Installed ps1.vim, a PowerShell Syntax Checker
-  " Plug '~/local-config-reader'
-        " Installed Local-Config-Reader, a secure local configuration reader
+    Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+    Plug 'junegunn/fzf.vim' | "Installed FZF, a Fuzzy Finder
+    Plug 'junegunn/goyo.vim' | Plug 'junegunn/limelight.vim' |
+        "Installed Goyo and Limelight, a Focusing Plugin Set
+    Plug 'jlanzarotta/bufexplorer' | "Installed Buffer Explorer Plugin
+    if has('nvim') || has('patch-8.0.902')
+        Plug 'mhinz/vim-signify'
+    else
+        Plug 'mhinz/vim-signify', { 'branch': 'legacy' }
+    endif
+    Plug 'ryanoasis/vim-devicons' |
 call plug#end()
 
 filetype off
@@ -242,3 +242,7 @@ let g:wakatime_PythonBinary = 'C:\Python37\python.exe'
 
 " Additional Settings for the vim-markdown Plugin
 let g:vim_markdown_folding_disabled = 1
+
+" Additional Settings for the Goyo + Limelight Plugin Set
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
