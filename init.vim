@@ -45,8 +45,8 @@ call plug#begin('$XDG_CONFIG_HOME/nvim/plugged')
     Plug 'plasticboy/vim-markdown' | "Installed vim-markdown
     Plug 'tpope/vim-surround' | "Installed vim-surround
     Plug 'wakatime/vim-wakatime' | "Installed WakaTime, a Coding Timekeeper
-    Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-    Plug 'junegunn/fzf.vim' | "Installed FZF, a Fuzzy Finder
+  " Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+  " Plug 'junegunn/fzf.vim' | "Installed FZF, a Fuzzy Finder
     Plug 'junegunn/goyo.vim' | Plug 'junegunn/limelight.vim' |
         "Installed Goyo and Limelight, a Focusing Plugin Set
     Plug 'jlanzarotta/bufexplorer' | "Installed Buffer Explorer Plugin
