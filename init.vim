@@ -203,20 +203,7 @@ let g:startify_custom_header = [
 \ '                         \    ㅣ       / ㅣ    /                           ',
 \ '                          \___ \    __/  / ___/                            ',
 \ '                                                                           ',
-\ '                                                                           ',
-\ '    * Remember to DEL /s /q **.exe for quiet, recursive .exe cleaning      ',
-\ '                                                                           ',
-\ '    * Press F1 to Open User init.vim                                       ',
-\ '    * Press Ctrl-F1 to Open System sysinit.vim                             ',
-\ '    * Press F2 to Open User init.vim in New Tab                            ',
-\ '    * Press Ctrl-F2 to Open System sysinit.vim in New Tab                  ',
-\ '    * Press F3 to Change Working Directory to that of Current File         ',
-\ '    * Press F10 to Save and Source a Vimscript File                        ',
-\ '    * Press F11 to Startify the Current Buffer                             ',
-\ '    * Press Ctrl-F11 to Open and Startify a New Tab                        ',
-\ '    * Press F12 to Install new Plugins via Vim-Plug                        ',
-\ '    * Press Shift-F12 to Update Plugins via Vim-Plug                       ',
-\ '    * Press Ctrl-F12 to Delete Plugins via Vim-Plug                        ']
+\ '                                                                           ']
 set sessionoptions=blank,curdir,folds,help,tabpages,winpos
     " Startify respects Preset Values of the Preceding Options
 
