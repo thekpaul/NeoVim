@@ -17,9 +17,13 @@ nnoremap <C-y> <C-r>
 inoremap <C-z> <Esc>ui
 inoremap <C-y> <Esc><C-r>i
 
+" Highlight Whitespace
+autocmd ColorScheme * highlight ExtraWhitespace ctermbg=black guibg=black
+match ExtraWhitespace /\s\+$/
+
 " Save Like Windows
-inoremap <C-s> <Esc>:%s/\s\+$//e<CR>:update<CR>a
-nnoremap <C-s> :%s/\s\+$//e<CR>:update<CR>
+inoremap <C-s> <Esc>:%s/\s\+$//e<CR>:let @/=""<CR>:update<CR>a
+nnoremap <C-s> :%s/\s\+$//e<CR>:let @/=""<CR>:update<CR>
 
 " delete, yank, select a document
 nnoremap dad ggVGd
