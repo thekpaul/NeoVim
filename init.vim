@@ -18,8 +18,8 @@ inoremap <C-z> <Esc>ui
 inoremap <C-y> <Esc><C-r>i
 
 " Save Like Windows
-inoremap <C-s> <Esc>:%s/\s\+$//g<CR>:update<CR>a
-nnoremap <C-s> :%s/\s\+$//g<CR>:update<CR>
+inoremap <C-s> <Esc>:%s/\s\+$//e<CR>:update<CR>a
+nnoremap <C-s> :%s/\s\+$//e<CR>:update<CR>
 
 " delete, yank, select a document
 nnoremap dad ggVGd
