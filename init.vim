@@ -33,9 +33,9 @@ nnoremap vad ggVG
 set noundofile | "No Undo Files
 
 " Set Paths to Various Interpreters for Faster Startup
-let g:python_host_prog = 'C:\Python27\python.exe'
-let g:python3_host_prog = 'C:\Python37\python.exe'
-let g:ruby_host_prog = 'C:\tools\ruby26\bin\ruby.exe'
+" let g:python_host_prog = 'C:\Python27\python.exe'
+" let g:python3_host_prog = 'C:\Python37\python.exe'
+" let g:ruby_host_prog = 'C:\tools\ruby26\bin\ruby.exe'
 
 " Vim-Plug as Plugin Manager
 call plug#begin('$XDG_CONFIG_HOME/nvim/plugged')
@@ -72,7 +72,7 @@ if has('win32')
     set shellcmdflag=\ -NoLogo\ -ExecutionPolicy\ RemoteSigned\ -Command
     set shellredir=\|\ Out-File\ -Encoding\ UTF8
 endif | "Set Default Shell Application to PowerShell
-set guifont=D2Coding:h10
+set guifont=D2Coding:h12
 set encoding=utf8 | "Set File Encoding as UTF-8
 language en
 let $LANG = 'en_US'
@@ -227,9 +227,6 @@ let g:indent_guides_exclude_filetypes = ['help', 'nerdtree', 'startify']
 let g:better_whitespace_ctermcolor = '#FFFFFF'
 let g:strip_whitespace_on_save = 1
 let g:better_whitespace_filetypes_blacklist = ['help', 'nerdtree', 'startify']
-
-" Additional Settings for the vim-wakatime Plugin
-let g:wakatime_PythonBinary = 'C:\Python37\python.exe'
 
 " Additional Settings for the vim-markdown Plugin
 let g:vim_markdown_folding_disabled = 1
